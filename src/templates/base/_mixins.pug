@@ -16,10 +16,10 @@ mixin image(file, alt="alt", items)
 			picture
 				each item in items
 					- const itemFileName = item.file.split(".")[0]
-					source(srcset=`${itemFileName}.webp` media=`(${item.mediaQuery}: ${item.mediaQuery === "max-width" ? (item.breakpoint - 0.02) / 16 : item.breakpoint / 16}em)` type="image/webp")
+					source(srcset=`${item.file}` media=`(${item.mediaQuery}: ${item.mediaQuery === "max-width" ? (item.breakpoint - 0.02) / 16 : item.breakpoint / 16}em)` type="image/webp")
 					source(srcset=`${item.file}` media=`(${item.mediaQuery}: ${item.mediaQuery === "max-width" ? (item.breakpoint - 0.02) / 16 : item.breakpoint / 16}em)`)
 
-				source(srcset=`${fileName}.webp` type="image/webp")
+				source(srcset=`${file}` type="image/webp")
 				img(src=`${file}` alt=`${alt}` loading='lazy')&attributes(attributes)
 	else
 		if isDev
@@ -30,7 +30,7 @@ mixin image(file, alt="alt", items)
 				img(src=`${file}` alt=`${alt}` loading='lazy')&attributes(attributes)
 			else
 				picture
-					source(srcset=`${fileName}.webp` type="image/webp")
+					source(srcset=`${file}` type="image/webp")
 					img(src=`${file}` alt=`${alt}` loading='lazy' )&attributes(attributes)
 
 //- Пример - +icon('@sprite/icon').i-icon
