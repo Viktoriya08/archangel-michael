@@ -1,0 +1,174 @@
+section.cards.section
+	.cards__container
+		.head-section
+			.head-section__short.head-section__short--width
+				+breadcrumbs(['бойцы'])
+
+			.head-section__title
+				h1.title бойцы
+
+				nav.head-section__nav
+					ul.tabs
+						li.tabs__item
+							button(type="button").tabs__btn.active mma
+						li.tabs__item
+							button(type="button").tabs__btn бокс
+						li.tabs__item
+							button(type="button").tabs__btn кикбоксинг
+						li.tabs__item
+							button(type="button").tabs__btn тайский бокс
+						li.tabs__item
+							button(type="button").tabs__btn кулачный бой
+
+		.cards__list
+
+			-for(let i = 0; i < 1; i++)
+				each item, i in [{name: 'Пётр Ян', format: '16-5-0', tag: 'легчайшая', r: true, u: true}, {name: 'иван штырков', format: '22-2-1', tag: 'полутяжелая', r: true, u: true}, {name: 'ильяс хамзин', format: '11-2-0', tag: 'полусредняя', r: true}, {name: 'алексей кунченко', format: '21-4-0', tag: 'полусредняя', r: true},]
+					.card
+						a(href="#").card__link
+
+						.card__img.cardBgVisible
+							.card__photo
+								+image(`img/card/card-${i}.png`, 'alt')
+							.card__label
+								if(item.u)
+									.label(data-winner="Чемпион ufc в полутяжёлом весе" data-popup="#card-popup")
+										+image('img/card/ufc.svg', 'alt')
+								if(item.r)
+									.label(data-winner="Чемпион rcc в полутяжёлом весе" data-popup="#card-popup")
+										+image('img/card/rcc.svg', 'alt')
+
+						.card__content
+							.card__title.title-underline=item.name
+
+							.card__info
+
+								.card__wrap
+									.card__name Рекорд
+									.card__data=item.format
+
+								.card__wrap
+									.card__name Весовая категория
+									.card__data=item.tag
+
+			.card
+
+				a(href="#").card__link
+
+				.card__img.cardBgVisible
+					.card__photo
+						+image('img/card/card-5.png', 'alt')
+
+				.card__content
+					.card__title.title-underline Пётр Ян
+
+					.card__info
+
+						.card__wrap
+							.card__name Рекорд
+							.card__data 16-5-0
+
+						.card__wrap
+							.card__name Весовая категория
+							.card__data легчайшая
+
+			.card
+
+				a(href="#").card__link
+
+				.card__img.cardBgVisible
+					.card__photo
+						+image('img/card/no-card.png', 'alt')
+
+				.card__content
+					.card__title.title-underline Пётр Ян
+
+					.card__info
+
+						.card__wrap
+							.card__name Рекорд
+							.card__data 16-5-0
+
+						.card__wrap
+							.card__name Весовая категория
+							.card__data легчайшая
+
+			.card
+
+				a(href="#").card__link
+
+				.card__img.cardBgVisible
+					.card__photo
+						+image('img/card/card-6.png', 'alt')
+					.card__label
+						.label(data-winner="Чемпион rcc в полутяжёлом весе" data-popup="#card-popup")
+							+image('img/card/rcc.svg', 'alt')
+
+				.card__content
+					.card__title.title-underline(data-popup="#card-popup") ильяс хамзин
+
+					.card__info
+
+						.card__wrap
+							.card__name Рекорд
+							.card__data 11-2-0
+
+						.card__wrap
+							.card__name Весовая категория
+							.card__data полусредняя
+
+			.card
+
+				a(href="#").card__link
+
+				.card__img.cardBgVisible
+					.card__photo
+						+image('img/card/card-7.png', 'alt')
+					.card__label
+						.label(data-winner="Чемпион rcc в полутяжёлом весе" data-popup="#card-popup")
+							+image('img/card/rcc.svg', 'alt')
+
+				.card__content
+					.card__title.title-underline(data-popup="#card-popup") алексей кунченко
+
+					.card__info
+
+						.card__wrap
+							.card__name Рекорд
+							.card__data 21-4-0
+
+						.card__wrap
+							.card__name Весовая категория
+							.card__data полусредняя
+
+			-for(let i = 0; i < 2; i++)
+				each item, i in [{name: 'Пётр Ян', format: '16-5-0', tag: 'легчайшая', r: true, u: true}, {name: 'иван штырков', format: '22-2-1', tag: 'полутяжелая', r: true, u: true}, {name: 'ильяс хамзин', format: '11-2-0', tag: 'полусредняя', r: true}, {name: 'алексей кунченко', format: '21-4-0', tag: 'полусредняя', r: true},]
+					.card
+						a(href="#").card__link
+
+						.card__img.cardBgVisible
+							.card__photo
+								+image(`img/card/card-${i}.png`, 'alt')
+							.card__label
+								if(item.u)
+									.label(data-winner="Чемпион ufc в полутяжёлом весе" data-popup="#card-popup")
+										+image('img/card/ufc.svg', 'alt')
+								if(item.r)
+									.label(data-winner="Чемпион rcc в полутяжёлом весе" data-popup="#card-popup")
+										+image('img/card/rcc.svg', 'alt')
+
+						.card__content
+							.card__title.title-underline=item.name
+
+							.card__info
+
+								.card__wrap
+									.card__name Рекорд
+									.card__data=item.format
+
+								.card__wrap
+									.card__name Весовая категория
+									.card__data=item.tag
+
+
+

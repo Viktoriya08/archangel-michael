@@ -1,0 +1,35 @@
+extends /base/_head
+block content
+	//- header-white - color шапки белый
+	body.main.header-white
+		.layout
+			//-HEADER
+			include /sections/_header
+			main.page.js-paralax.video-page
+
+				//-include /sections/_main-loader
+
+				//- Баннер
+				include /sections/main/_banner
+
+				//- Короткие новости
+				include /sections/main/_short
+
+				//- амбассадоры клуба
+				include /sections/main/_default-slider
+
+				//-БОЙЦЫ КЛУБА В РИНГЕ
+				include /sections/main/_ring
+
+				//-видео о бойцовском клубе
+				include /sections/main/_video
+
+				//- актуальные новости
+				include /sections/main/_news
+
+			//-FOOTER
+			include /sections/_footer
+		//- POPUPS
+		include /popups/_all
+		//- SCRIPTS
+		include /base/_scripts

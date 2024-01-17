@@ -1,0 +1,14 @@
+//-.parallax-section
+section
+	//- Видео для мобилки не больше 20mb, иначе на телефонах Realme не грузится
+	.video(data-video data-paralax-down="2")
+		.video__bg
+		video.video__video.video__video--desk(poster="img/video/video-bg.jpg" loop preload="metadata")
+			source(src="img/video/desktop.mp4" type="video/mp4")
+		video.video__video.video__video--mobile(poster="img/video/video-bg.jpg" loop preload="metadata")
+			source(src="img/video/video.mp4" type="video/mp4")
+		.video__container
+
+			h2.video__title.title-short видео <br>о бойцовском <br>клубе
+
+			button(type="button").video__play

@@ -1,0 +1,32 @@
+extends /base/_head
+block content
+	body.inner
+		.layout
+			//-HEADER
+			include /sections/_header
+			main.page
+
+				.section
+					.section__container
+
+						br
+						br
+						h5 Попапы
+						br
+						br
+						.btn(data-popup="#card-popup") Титулы бойца
+
+						br
+						br
+						.btn(data-popup="#broadcast") трансляция боя (youtube)
+
+						br
+						br
+						.btn(data-popup="#broadcast-2") трансляция боя (tv)
+
+			//-FOOTER
+			include /sections/_footer
+		//- POPUPS
+		include /popups/_all
+		//- SCRIPTS
+		include /base/_scripts

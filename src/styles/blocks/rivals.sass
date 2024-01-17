@@ -1,0 +1,38 @@
+.rivals
+	display: flex
+
+	&__img
+		width: rem(84)
+		height: rem(84)
+		border-radius: 50%
+		overflow: hidden
+		+until-tablet-xl
+			width: rem(64)
+			height: rem(64)
+
+		&:nth-child(1)
+			background-color: #c4c9cd
+
+		&:nth-child(2)
+			margin-left: rem(-15)
+			background-color: #e1e0e4
+			+until-tablet-xl
+				margin-left: rem(-5)
+
+	img
+		display: block
+		width: auto
+		height: 100%
+		margin: 0 auto
+
+	&--m
+		.rivals__img
+			width: rem(120)
+			height: rem(120)
+			+until-tablet-xl
+				width: rem(84)
+				height: rem(84)
+			+until-tablet
+				width: rem(64)
+				height: rem(64)
+

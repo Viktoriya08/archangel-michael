@@ -1,0 +1,155 @@
+.news-page
+	&:not(:first-child)
+		margin-top: fluid(40, 80)
+
+	&:last-child
+		margin-bottom: fluid(50, 120)
+
+	&__grid
+		display: grid
+		grid-template-columns: repeat(12, 1fr)
+		column-gap: rem(20)
+		row-gap: rem(40)
+
+		+until-tablet
+			row-gap: rem(20)
+
+		.tabs
+			+until-tablet-xl
+				padding: 0 rem(20)
+				margin-right: rem(-20)
+				margin-left: rem(-20)
+
+
+	+until-tablet-xl
+		grid-template-columns: 100%
+
+	+until-tablet
+		.news__card
+			min-height: auto
+
+	&__left
+		grid-column: 1/4
+		+until-tablet-xl
+			grid-column: 1/-1
+
+	&__right
+		grid-column: 4/-1
+		+until-tablet-xl
+			grid-column: 1/-1
+
+	&__tabs
+		margin-bottom: fluid(20, 40)
+		+until-tablet-xl
+			margin-top: rem(60)
+		+until-tablet
+			margin-top: rem(20)
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(9, 1fr)
+		column-gap: rem(20)
+		row-gap: rem(40)
+		margin-bottom: rem(40)
+		+until-tablet-xl
+			grid-template-columns: 1fr 1fr
+		+until-tablet
+			display: flex
+			flex-direction: column
+			row-gap: rem(20)
+
+			.news__card
+				max-width: 100%
+
+
+	&__item
+		grid-column: span 3
+		height: auto
+		+until-tablet-xl
+			grid-column: auto
+
+		&:first-child
+			grid-column: 1/7
+			+until-tablet-xl
+				grid-column: auto
+
+			&:not(.news__card--grey)
+
+				.news__title
+					font-size: fluid(16, 32)
+
+		&:nth-child(2)
+			grid-column: 7/-1
+			+until-tablet-xl
+				grid-column: auto
+
+		&:nth-child(7)
+			grid-column: 4/-1
+			+until-tablet-xl
+				display: none
+
+			.news__title
+				font-size: fluid(16, 32)
+
+		&.news__card--grey
+			+until-tablet
+				min-height: auto
+
+	&__top
+		grid-column: 1/-1
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		margin-bottom: fluid(20, 40)
+		background-color: var(--gray)
+		+until-desktop-xl
+			grid-template-columns: repeat(2, 1fr)
+			padding: rem(30)
+
+		+until-tablet
+			grid-template-columns: 100%
+			padding: rem(30) rem(5)
+			margin-left: rem(-15)
+			margin-right: rem(-15)
+			gap: rem(24)
+
+		.news__card
+			max-width: none
+
+			&:nth-child(4)
+				display: none
+				+until-desktop-xl
+					display: block
+				+until-tablet
+					display: none
+
+		.news__card--grey
+			+until-tablet-xl
+				padding: rem(10)
+
+	&__row
+		grid-column: 1/-1
+		+until-tablet-xl
+			grid-column: 1/-1
+
+		+until-tablet
+			.news__card--border
+				border-top: none
+
+	.news__title
+		font-size: rem(24)
+		font-weight: 500
+		margin-bottom: rem(12)
+		+until-tablet
+			font-size: rem(16)
+
+	.news__content
+		.news__data
+			margin-bottom: rem(20)
+		.news__title
+			line-height: 1.2
+
+	&__short
+		display: flex
+		flex-direction: column
+
+

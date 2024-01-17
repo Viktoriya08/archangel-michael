@@ -1,0 +1,51 @@
+.default-radio
+	position: relative
+	&__input
+		appearance: none
+		position: absolute
+		top: 0
+		left: 0
+		width: 0
+		height: 0
+		opacity: 0
+		&:checked
+			+ .default-radio__label
+				&::before
+					background-image: url("data:image/svg+xml,%3Csvg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.98962 6.66663C2.15161 6.66663 0.65625 5.17139 0.65625 3.33337C0.65625 1.49536 2.15161 0 3.98962 0C5.82764 0 7.32288 1.49536 7.32288 3.33337C7.32288 5.17139 5.82764 6.66663 3.98962 6.66663Z' fill='#{$c-main}'/%3E%3C/svg%3E%0A")
+					background-repeat: no-repeat
+					background-position: center
+		&:disabled
+			+ .default-radio__label
+				filter: grayscale(100%)
+				opacity: .5
+				&::before
+					background-color: $c-black
+		&[required]
+			+ .default-radio__label
+				span
+					color: $c-error
+
+		&.error
+			+ .default-radio__label
+				color: $c-error
+				&::before
+					border-color: $c-error
+	&__label
+		position: relative
+		display: flex
+		cursor: pointer
+		+hover
+			&::before
+				border-color: $c-main
+		&::before
+			content: ''
+			position: relative
+			display: block
+			width: em(20)
+			height: em(20)
+			border-radius: 50%
+			border: 1px solid $c-border
+			background-color: #fff
+			margin-right: em(16)
+			flex: none
+			transition: border-color .3s ease

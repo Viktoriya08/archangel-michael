@@ -1,0 +1,15 @@
+.news-page
+
+	.short__name
+		@media screen and (max-width: 1200px)
+			+cutString(4)
+		@media screen and (max-width: 1040px)
+			+cutString(5)
+		@media screen and (max-width: 991px)
+			+cutString(3)
+		@media screen and (max-width: 800px)
+			+cutString(4)
+		@media screen and (max-width: 768px)
+			+cutString(2)
+		@media screen and (max-width: 470px)
+			+cutString(3)

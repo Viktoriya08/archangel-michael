@@ -1,0 +1,21 @@
+.loader
+	width: rem(36)
+	height: rem(36)
+	border-radius: 50%
+	background-color: var(--color-white)
+	position: relative
+	margin: rem(90) auto rem(-50)
+	+until-desktop
+		margin-top: rem(40)
+	&::after
+		content: ' '
+		display: block
+		width: rem(44)
+		height: rem(44)
+		background: conic-gradient(#0000,var(--gold))
+		border-radius: 50%
+		position: absolute
+		top: rem(-4)
+		left: rem(-4)
+		z-index: -1
+		animation: loader 2s linear infinite

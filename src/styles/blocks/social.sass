@@ -1,0 +1,39 @@
+.social
+
+	&--gray
+		.social__link
+			background-color: var(--gray)
+
+	&__title
+		font-size: fluid(16, 20)
+		line-height: 100%
+		font-weight: 500
+		text-transform: uppercase
+		margin-bottom: rem(25)
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+
+	&__link
+		width: rem(34)
+		height: rem(34)
+		background-color: var(--color-text)
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: rem(14)
+		line-height: 100%
+		font-weight: 500
+		text-transform: uppercase
+		text-decoration: none
+		transition: .3s
+		&:hover
+			background-color: var(--gold)
+			color: var(--main)
+
+	&__elem
+		&:not(:last-child)
+			margin-right: rem(4)
+
+

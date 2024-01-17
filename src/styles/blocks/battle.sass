@@ -1,0 +1,188 @@
+.battle
+	font-weight: 500
+	display: grid
+	grid-template-columns: 13% 36% 55px 36% 11%
+	align-items: center
+	background-color: var(--color-white)
+	padding: rem(15) rem(24)
+	position: relative
+
+	&--grey
+		background-color: var(--gray)
+
+	&--row
+		.battle__result
+			+until-desktop-xl
+				margin-left: auto
+				text-align: right
+			+until-tablet
+				text-align: left
+				margin-left: 0
+				margin-top: rem(15)
+				grid-row: 4
+				grid-column: 1/-1
+
+		.battle__btn
+			+until-tablet
+				grid-row: 5
+				grid-column: 1/-1
+
+				.btn
+					width: 100%
+
+	+until-desktop-xl
+		grid-template-columns: 1fr rem(30) 1fr
+		padding: rem(15)
+		column-gap: 1%
+		row-gap: rem(24)
+	+until-tablet
+		grid-template-columns: 1fr 1fr
+		row-gap: rem(10)
+
+	&__time
+		font-size: fluid(16, 24)
+		line-height: 140%
+		text-transform: uppercase
+		display: flex
+		align-items: center
+		width: max-content
+		&::before
+			content: ' '
+			display: block
+			width: rem(20)
+			height: rem(20)
+			background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10.0001' r='7.5' stroke='%23737373'/%3E%3Cpath d='M10 5.00012V10.5001L13 13.5001' stroke='%23737373'/%3E%3C/svg%3E")
+			background-position: center
+			background-repeat: no-repeat
+			background-size: auto
+			margin-right: rem(8)
+			flex: none
+		+until-desktop-xl
+			margin-left: auto
+		+until-tablet
+			margin-left: 0
+			grid-row: 4
+
+	&__name
+		display: flex
+		flex-direction: column
+		height: 100%
+		overflow: hidden
+
+		span:not([class])
+			font-size: fluid(12, 14)
+			line-height: 140%
+			color: var(--gray-dark)
+
+		+until-desktop-xl
+			margin: 0 rem(10)
+			width: 100%
+		+until-tablet
+			justify-content: center
+
+	&__fighter
+		max-width: 100%
+		font-size: fluid(16, 24)
+		line-height: 140%
+		margin-bottom: rem(15)
+		text-transform: uppercase
+		overflow: hidden
+		text-overflow: ellipsis
+		+until-desktop-xl
+			margin-bottom: rem(8)
+			line-height: 120%
+
+	&__deskr
+		margin-top: rem(10)
+		text-transform: initial
+		span:not([class])
+			font-size: rem(14)
+			line-height: 140%
+			color: var(--gray-dark)
+
+
+	&__vs
+		font-size: rem(16)
+		line-height: 140%
+		text-transform: uppercase
+		margin: 0 auto
+		+until-desktop-xl
+			font-size: rem(14)
+			grid-row: 1
+			grid-column: 2
+			text-align: center
+			margin: 0
+		+until-tablet
+			grid-column: span 2
+			grid-row: 2
+			text-align: left
+			margin-left: rem(25)
+
+	&__elem
+		display: flex
+		justify-content: flex-end
+		text-align: right
+		height: 100%
+		.rivals
+			margin-left: rem(15)
+		&--left
+			text-align: left
+			flex-direction: row-reverse
+
+			.rivals
+				margin-left: 0
+				margin-right: rem(15)
+		+until-desktop-xl
+			grid-row: 1
+			&--left
+				grid-column: 3
+
+		+until-tablet-xl
+			.rivals
+				margin: 0
+				justify-content: center
+
+		+until-tablet
+			grid-row: auto
+			grid-column: span 2
+			flex-direction: row-reverse
+			text-align: left
+
+
+	&__btn
+		position: relative
+		z-index: 2
+		.btn
+			margin-left: auto
+		+until-desktop-xl
+			grid-column: 3
+			margin-right: auto
+		+until-tablet
+			grid-column: 2
+			grid-row: 4
+			margin-right: 0
+
+	&__link
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		box-shadow: 0px 5px 12px 0px rgba(34, 60, 80, 0)
+		transition: box-shadow .4s
+		&:hover
+			box-shadow: 0px 5px 12px 0px rgb(228 228 228)
+
+	&__photo
+		// +until-desktop-xl
+		// 	margin-bottom: rem(20)
+		+until-tablet
+			margin-bottom: 0
+
+	&__result
+		text-transform: uppercase
+		font-size: fluid(16, 20)
+
+
+

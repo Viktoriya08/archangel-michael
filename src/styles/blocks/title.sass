@@ -1,0 +1,102 @@
+.title-duel
+	font-size: fluid(32, 64)
+	line-height: 1.1
+	font-weight: 500
+	text-transform: uppercase
+	letter-spacing: -0.02em
+	+until-tablet
+		line-height: 1.2
+
+	sup
+		color: var(--gold)
+		font-size: fluid(14, 34)
+
+	&--flex
+		display: flex
+		flex-direction: column
+
+		.title-duel__el
+			&:first-child
+				display: flex
+				align-items: flex-start
+				flex-wrap: wrap
+				&::after
+					content: 'vs'
+					color: var(--gold)
+					font-size: fluid(20, 34)
+					padding-left: rem(10)
+					margin-top: rem(4)
+					+until-tablet
+						margin-top: rem(2)
+
+	&--s
+		font-size: fluid(24, 44)
+		line-height: 1
+		sup
+			font-size: fluid(12, 24)
+
+		.title-duel__el
+			&:first-child
+				&::after
+					font-size: fluid(12, 24)
+					margin-top: rem(5)
+					+until-tablet
+						margin-top: rem(3)
+
+	&--xs
+		font-size: fluid(18, 24)
+
+		.title-duel__el
+			&:first-child
+				&::after
+					font-size: rem(12)
+					margin-top: rem(-3)
+					padding-left: rem(5)
+
+.title-short
+	font-size: fluid(16, 20)
+	line-height: 100%
+	font-weight: 500
+	text-transform: uppercase
+	letter-spacing: -0.02em
+	width: min-content
+
+.title
+	font-size: fluid(24, 44)
+	line-height: 100%
+	font-weight: 500
+	text-transform: uppercase
+	letter-spacing: -0.02em
+
+	&--short
+		width: min-content
+
+	&--mob
+		+until-tablet-xl
+			font-size: rem(44)
+		+until-tablet
+			font-size: rem(32)
+
+.title-underline
+	position: relative
+	cursor: pointer
+	&::after
+		content: ' '
+		background-color: currentColor
+		display: block
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 0
+		height: rem(1)
+		transition: width .3s
+	&:hover
+		&::after
+			width: 100%
+
+.title-hidden
+	position: absolute
+	clip: rect(0 0 0 0)
+	width: 1px
+	height: 1px
+	margin: -1px

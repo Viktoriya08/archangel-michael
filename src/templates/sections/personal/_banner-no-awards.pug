@@ -1,0 +1,36 @@
+section.section.personal-banner
+	.section__container
+
+		.personal-banner__box
+
+			.personal-banner__left
+				.personal-banner__name
+					button(type="button").btn-link.btn-link--revers
+						.btn-link__text назад
+					h1.personal-banner__title.title-short Хабибуллин Дмитрий
+				.personal-banner__champion
+					.personal-banner__label
+						.label
+							+image('img/card/no-awards.svg', 'alt')
+						.personal-banner__tl нет титулов
+
+			.personal-banner__center
+				+image('img/personal/personal-2.png', 'alt')
+
+			.personal-banner__right
+				.event
+					.event__top
+						.event__title предстоящий <br>бой
+						.event__name.title-duel.title-duel--xs.title-duel--flex
+							.title-duel__el пётр ян
+							.title-duel__el элджемейн стерлинг
+						.rivals
+							.rivals__img
+								+image('img/banner/rivals-1.jpg', 'alt')
+							.rivals__img
+								+image('img/banner/rivals-2.png', 'alt')
+					.event__bottom
+						.event__day
+							.event__dt 30 октября
+							.event__wk понедельник / 04:00 по мск
+						button(type="button").btn подробнее

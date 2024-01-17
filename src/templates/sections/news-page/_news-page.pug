@@ -1,0 +1,242 @@
+section.news-page
+	.news-page__container
+		.news-page__grid
+
+			//- Короткие новости в столбец - SHORT NEWS
+			.news-page__left.news-page__short.short.short--noslider
+
+				h2.title-short short news
+
+				.slider-mobile.short__mobile
+					.swiper
+						.swiper-wrapper
+
+							.swiper-slide
+								.short__elem.short__elem--white.short__elem--border
+									.short__anim
+										.short__name Lorem ipsum "" dolor sit amet, consectetur adipiscing elit. Nunc vel sapien eros. Quisque dui turpis
+										.short__data сегодня
+
+							.swiper-slide
+								.short__elem.short__elem--white.short__elem--border
+									.short__anim
+										.short__name Американские бойцы Порье и Гэтжи проведут реванш на турнире UFC 291 в США
+										.short__data сегодня
+
+							.swiper-slide
+								.short__elem.short__elem--white.short__elem--border
+									.short__anim
+										.short__name Нганну отреагировал на критику со стороны Макгрегора после перехода в PFL
+										.short__data сегодня
+
+							.swiper-slide
+								.short__elem.short__elem--white.short__elem--border
+									.short__anim
+										.short__name Александр Усик может провести бой против Деонтея Уайлдера вместо Даниэля Дюбуа
+										.short__data сегодня
+
+							-for(let i = 0; i < 8; i++)
+								.swiper-slide
+									.short__elem.short__elem--white.short__elem--border
+										.short__anim
+											.short__name «Я просто хочу драться с лучшими» – Чжан Пеймиан нацелен на титул чемпиона «Я просто хочу драться с лучшими» – Чжан Пеймиан нацелен на титул чемпиона
+											.short__data сегодня
+
+						.swiper-pagination
+
+
+			.news-page__right
+				nav.news-page__tabs
+					ul.tabs
+						li.tabs__item
+							button(type="button").tabs__btn.active все
+						li.tabs__item
+							button(type="button").tabs__btn бои
+						li.tabs__item
+							button(type="button").tabs__btn интервью
+						li.tabs__item
+							button(type="button").tabs__btn интервью
+						li.tabs__item
+							button(type="button").tabs__btn rcc
+						li.tabs__item
+							button(type="button").tabs__btn aca
+						li.tabs__item
+							button(type="button").tabs__btn open fc
+						li.tabs__item
+							button(type="button").tabs__btn top
+
+				.news-page__list.news
+					.news-page__item.news__card
+						a(href="#").news__link
+						.news__img
+							+image('img/news/news-3.jpg', 'alt')
+							.tags
+								.tags__tag интервью
+						.news__content
+							.news__data
+								time(datatime="3 мая 2023") 3 мая 2023
+							.news__title Полный кард турнира RCC 15
+							.news__text 13 мая в КРК «Уралец» состоится международный турнир по смешанным единоборствам и кикбоксингу RCC 15, который закроет «Бойцовский месяц RCC»
+
+					.news-page__item.news__card
+						a(href="#").news__link
+						.news__img
+							+image('img/news/news-4.jpg', 'alt')
+							.tags
+								.tags__tag rcc
+						.news__content
+							.news__data
+								time(datatime="3 мая 2023") 3 мая 2023
+							.news__title RCC 15: еще одна яркая встреча турнира Новиков vs Пшебельский
+							.news__text 13 мая в КРК «Уралец» состоится международный турнир по смешанным единоборствам и кикбоксингу RCC 15, который закроет «Бойцовский месяц RCC»
+
+					.news-page__item.news__card
+						a(href="#").news__link
+						.news__img
+							+image('img/news/news-4.jpg', 'alt')
+							.tags
+								.tags__tag aca
+						.news__content
+							.news__data
+								time(datatime="3 мая 2023") 3 мая 2023
+							.news__title RCC 15: еще одна яркая встреча турнира Новиков vs Пшебельский
+							.news__text 13 мая в КРК «Уралец» состоится международный турнир по смешанным единоборствам и кикбоксингу RCC 15, который закроет «Бойцовский месяц RCC»
+
+					.news-page__item.news__card
+						a(href="#").news__link
+						.news__img
+							+image('img/news/news-2.jpg', 'alt')
+							.tags
+								.tags__tag open fc
+						.news__content
+							.news__data
+								time(datatime="3 мая 2023") 3 мая 2023
+							.news__title Полный кард турнира RCC 15
+							.news__text 13 мая в Екатеринбурге пройдет 15-й номерной турнир RCC, где соберутся звезды мирового ММА и кикбоксинга.
+
+					.news-page__item.news__card
+						a(href="#").news__link
+						.news__img
+							+image('img/news/news-1.jpg', 'alt')
+							.tags
+								.tags__tag top
+						.news__content
+							.news__data
+								time(datatime="3 мая 2023") 3 мая 2023
+							.news__title Осталось всего ДВА дня до RCC 15
+							.news__text 13 мая в Екатеринбурге пройдет 15-й номерной турнир RCC, где соберутся звезды мирового ММА и кикбоксинга.
+
+					.news-page__item.news__card
+						a(href="#").news__link
+						.news__img
+							+image('img/news/news-4.jpg', 'alt')
+							.tags
+								.tags__tag интервью
+						.news__content
+							.news__data
+								time(datatime="3 мая 2023") 3 мая 2023
+							.news__title Осталось всего ДВА дня до RCC 15
+							.news__text 13 мая в Екатеринбурге пройдет 15-й номерной турнир RCC, где соберутся звезды мирового ММА и кикбоксинга.
+
+					.news-page__item.news__card
+						a(href="#").news__link
+						.news__img
+							+image('img/news/news-5.jpg', 'alt')
+							.tags
+								.tags__tag rcc
+						.news__content
+							.news__data
+								time(datatime="3 мая 2023") 3 мая 2023
+							.news__title Полный кард турнира RCC 15
+							.news__text 13 мая в КРК «Уралец» состоится международный турнир по смешанным единоборствам и кикбоксингу RCC 15, который закроет «Бойцовский месяц RCC»
+
+				//-Серый блок новостей
+				//- .news-page__top
+				//- 	.news__card.news__card--grey
+				//- 		a(href="#").news__link
+				//- 		.tags
+				//- 			.tags__tag top
+				//- 			.news__data
+				//- 				time(datatime="3 мая 2023") 3 мая 2023
+
+				//- 		.news__content
+				//- 			.news__title--gray Полный кард турнира RCC 15
+				//- 			.news__text 13 мая в КРК «Уралец» состоится международный турнир по смешанным единоборствам и кикбоксингу RCC 15, который закроет «Бойцовский месяц RCC»
+
+				//- 	.news__card.news__card--grey
+				//- 		a(href="#").news__link
+				//- 		.tags
+				//- 			.tags__tag top
+				//- 			.news__data
+				//- 				time(datatime="3 мая 2023") 3 мая 2023
+				//- 		.news__content
+				//- 			.news__title--gray RCC 15: еще одна яркая встреча турнира Новиков vs Пшебельский
+				//- 			.news__text 13 мая в КРК «Уралец» состоится международный турнир по смешанным единоборствам и кикбоксингу RCC 15, который закроет «Бойцовский месяц RCC»
+
+				//- 	.news__card.news__card--grey
+				//- 		a(href="#").news__link
+				//- 		.tags
+				//- 			.tags__tag top
+				//- 			.news__data
+				//- 				time(datatime="3 мая 2023") 3 мая 2023
+				//- 		.news__content
+				//- 			.news__title--gray Осталось всего ДВА дня до RCC 15
+				//- 			.news__text 13 мая в КРК «Уралец» состоится международный турнир по смешанным единоборствам и кикбоксингу RCC 15, который закроет «Бойцовский месяц RCC»
+
+				//- 	.news__card.news__card--grey
+				//- 		a(href="#").news__link
+				//- 		.tags
+				//- 			.tags__tag top
+				//- 			.news__data
+				//- 				time(datatime="3 мая 2023") 3 мая 2023
+				//- 		.news__content
+				//- 			.news__title--gray Осталось всего ДВА дня до RCC 15
+				//- 			.news__text 13 мая в КРК «Уралец» состоится международный турнир по смешанным единоборствам и кикбоксингу RCC 15, который закроет «Бойцовский месяц RCC»
+
+				//- Блок новостей - новость в строку
+				.news-page__row
+					.news-page__item.news__card.news__card--row.news__card--border
+						a(href="#").news__link
+						.news__img
+							+image('img/news/news-2.jpg', 'alt')
+							.tags
+								.tags__tag rcc
+						.news__content
+							.news__data
+								time(datatime="3 мая 2023") 3 мая 2023
+							.news__title.title-underline Полный кард турнира RCC 15
+							.news__text 13 мая в КРК «Уралец» состоится международный турнир по смешанным единоборствам и кикбоксингу RCC 15, который закроет «Бойцовский месяц RCC» из четырех международных событий
+
+					.news-page__item.news__card.news__card--row.news__card--border
+						a(href="#").news__link
+						.news__img
+							+image('img/news/news-4.jpg', 'alt')
+							.tags
+								.tags__tag бои
+						.news__content
+							.news__data
+								time(datatime="3 мая 2023") 3 мая 2023
+							.news__title.title-underline RCC 15: еще одна яркая встреча турнира Новиков vs Пшебельский
+							.news__text 13 мая в КРК «Уралец» состоится международный турнир по смешанным единоборствам и кикбоксингу RCC 15, который закроет «Бойцовский месяц RCC»
+
+					.news-page__item.news__card.news__card--row.news__card--border
+						a(href="#").news__link
+						.news__img
+							+image('img/news/news-6.jpg', 'alt')
+							.tags
+								.tags__tag интервью
+						.news__content
+							.news__data
+								time(datatime="3 мая 2023") 3 мая 2023
+							.news__title Осталось всего ДВА дня до RCC 15
+							.news__text 13 мая в КРК «Уралец» состоится международный турнир по смешанным единоборствам и кикбоксингу RCC 15, который закроет «Бойцовский месяц RCC» из четырех международных событий
+
+				.pagination
+					.pagination__list
+						.pagination__el.active 1
+						.pagination__el 2
+						.pagination__el 3
+						.pagination__el 4
+
+					button(type="button").pagination__more.title-underline показать ещё
+					.pagination__count 8 из 44

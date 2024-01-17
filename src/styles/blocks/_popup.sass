@@ -1,0 +1,139 @@
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 50
+	display: none
+	align-items: center
+	justify-content: center
+	width: 100%
+	height: 100vh
+	background-color: rgba(0, 0, 0, 0.15)
+	transition: opacity 0.3s
+	opacity: 0
+	&.opening
+		display: flex
+	&.opened
+		opacity: 1
+		display: flex
+		.popup__block
+			transform: none
+			opacity: 1
+	&.closing
+		opacity: 0
+		.popup__block
+			transform: translateY(-30%)
+
+	&__block
+		position: relative
+		width: 100%
+		max-height: 100%
+		min-height: fluid(300, 420)
+		max-width: rem(700)
+		padding: fluid(15, 24)
+		transform: translateY(-30%)
+		background: #FFFFFF
+		overflow-y: auto
+		overflow-x: hidden
+		transition: transform 0.4s
+		display: flex
+		flex-direction: column
+		+Vscroll()
+		&--bg
+			background-image: url("data:image/svg+xml,%3Csvg width='85' height='91' viewBox='0 0 85 91' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M83 45.5L1 1V90L83 45.5Z' stroke='%23E4E4E4'/%3E%3C/svg%3E")
+			background-repeat: no-repeat
+			background-position: bottom rem(20) right rem(20)
+			background-size: auto
+			+until-tablet
+				background-image: none
+		+until-tablet
+			height: 100%
+			padding: rem(40) rem(15) rem(80)
+
+	&__content
+		width: 100%
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+
+		a
+			word-break: break-all
+
+		&:not(:first-child)
+			margin-top: 20px
+
+		+until-tablet
+			justify-content: center
+
+
+	&__text
+		max-width: 50%
+		+until-tablet
+			max-width: 80%
+
+	&__title
+		font-size: fluid(20, 44)
+		font-weight: 500
+		margin-bottom: fluid(20, 40)
+		text-transform: uppercase
+	&__close
+		position: absolute
+		width: rem(14)
+		height: rem(14)
+		top: rem(18)
+		right: rem(18)
+		z-index: 2
+		size: rem(20)
+		background-color: var(--color-text)
+		mask:
+			image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8 8M15 15L8 8M8 8L1 15L15 1' stroke='%23333333' stroke-width='2'/%3E%3C/svg%3E")
+			repeat: no-repeat
+			position: center
+		transition: background-color 0.3s
+		cursor: pointer
+		&:hover
+			background-color: var(--gold)
+
+	.btn
+		margin-top: rem(24)
+
+
+.card-popup
+
+	&__item
+		border-top: 1px solid var(--border)
+		padding: rem(14) 0
+		display: flex
+		justify-content: space-between
+
+		&:last-child
+			border-bottom: 1px solid var(--border)
+
+	&__name
+		text-transform: uppercase
+		font-weight: 500
+		font-size: fluid(14, 20)
+		max-width: rem(180)
+
+	&__icon
+		width: rem(64)
+		height: rem(64)
+		img
+			display: block
+			width: 100%
+			height: 100%
+
+	&__btns
+		margin-top: fluid(0, 35)
+
+		.btn
+			width: fit-content
+
+			&:not(:last-child)
+				margin-right: rem(15)
+
+
+
+
+

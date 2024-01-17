@@ -1,0 +1,37 @@
+@import "nouislider/dist/nouislider.css"
+
+.slider-range
+	&__price
+		display: flex
+		justify-content: space-between
+		margin-top: rem(10)
+		span
+			&:empty
+				display: none
+			&::after
+				content: ' ₽'
+		input
+			max-width: 100px
+	.noUi
+		&-target
+			background: $c-second
+			height: 8px
+			border: 0
+			border-radius: 10px
+			box-shadow: none
+		&-connects
+			background: grey
+		&-connect
+			background: $c-main
+
+		&-horizontal
+			.noUi-handle
+				size: 20px
+				border-radius: 50%
+				border: 0
+				box-shadow: 2px 2px 10px rgba(0, 37, 79, 0.15)
+				top: -7px
+				right: -8.5px
+				cursor: grab
+				&::after, &::before
+					content: none

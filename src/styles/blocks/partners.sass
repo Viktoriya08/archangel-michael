@@ -1,0 +1,34 @@
+.partners
+
+	&__title
+		margin-bottom: rem(24)
+		width: auto
+
+	&__list
+		display: grid
+		grid-template-columns: 30% 30% 30%
+		gap: rem(15)
+		+until-tablet
+			grid-template-columns: 1fr 1fr 1fr
+			gap: rem(5)
+			> *
+				min-width: 0
+
+	&__link
+		display: block
+		max-width: rem(122)
+		height: rem(30)
+		+until-tablet
+			width: rem(90)
+			height: rem(22)
+
+
+		img
+			height: 100%
+			display: block
+
+	&__elem
+		&:not(:last-child)
+			margin-right: rem(20)
+			+until-tablet
+				margin-right: 0

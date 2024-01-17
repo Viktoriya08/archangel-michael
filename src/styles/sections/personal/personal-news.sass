@@ -1,0 +1,28 @@
+.personal-news
+
+	.title
+		max-width: rem(325)
+
+	.news__text
+		+cutString(3)
+
+	.personal-news__top
+		+until-tablet
+			gap: 0
+
+	.section__subtitle
+		margin-top: 0
+		+until-tablet
+			display: none
+
+	.news__title
+		letter-spacing: -0.02em
+		font-size: rem(16)
+		+until-tablet-xl
+			font-size: rem(24)
+		+until-tablet
+			font-size: rem(16)
+
+	.news__card
+		+until-tablet
+			max-width: 100%

@@ -1,0 +1,151 @@
+.personal-banner
+	background: linear-gradient(180deg, #F6F6F6 0%, #E4E4E4 107.87%)
+	font-weight: 500
+
+	&__box
+		display: grid
+		grid-template-columns: repeat(12, 1fr)
+		gap: rem(20)
+		+until-tablet-xl
+			gap: 0
+		+until-tablet
+			display: flex
+			flex-direction: column
+
+	&__left
+		grid-column: 1/5
+		display: flex
+		flex-direction: column
+		margin-bottom: rem(15)
+		+until-tablet-xl
+			grid-column: 1/6
+		+until-tablet
+			margin-bottom: 0
+
+	&__center
+		grid-column: 5/9
+		margin-left: 10%
+
+		img
+			display: block
+			width: auto
+
+		+until-tablet-xl
+			grid-column: 8/-1
+			margin-left: 0
+			margin-right: rem(40)
+
+		+until-tablet
+			order: 2
+			margin-left: 0
+
+			img
+				margin: 0 auto
+
+	&__right
+		grid-column: 10/-1
+		+until-tablet-xl
+			grid-column: 1/-1
+			background-color: var(--color-white)
+			margin-left: rem(-40)
+			margin-right: rem(-40)
+		+until-tablet
+			order: 2
+			margin-right: rem(-15)
+			margin-left: rem(-15)
+
+	&__title
+		font-size: fluid(25, 90)
+		line-height: 90%
+		text-transform: uppercase
+		width: min-content
+		margin-bottom: rem(24)
+
+	&__name
+		flex-grow: 1
+
+	.btn-link
+		margin-bottom: rem(40)
+
+	&__champion
+		display: flex
+		row-gap: rem(10)
+		padding: rem(24) 0
+		border-top: 1px solid var(--gray-dark)
+		flex-wrap: wrap
+		+until-tablet-xl
+			flex-direction: column
+			row-gap: 0
+			max-width: rem(245)
+
+	&__tl
+		text-transform: uppercase
+		font-size: rem(14)
+
+	&__label
+		max-width: rem(165)
+		display: flex
+		align-items: center
+
+		&:not(:last-child)
+			margin-right: 10%
+			+until-tablet-xl
+				margin-right: 0
+				margin-bottom: rem(10)
+		.label
+			margin-right: rem(12)
+			flex: 0 0 auto
+
+	.rivals
+		margin-bottom: rem(24)
+		+until-tablet-xl
+			margin-bottom: rem(12)
+
+	.rivals__img
+		width: rem(44)
+		height: rem(44)
+
+	.event
+		+until-tablet-xl
+			background-color: var(--gray)
+			margin: rem(40)
+			margin-bottom: 0
+			padding: rem(24)
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+		+until-tablet
+			flex-direction: column
+			align-items: flex-start
+			margin: rem(24) rem(15) 0
+
+	.event__top
+		+until-tablet-xl
+			display: flex
+			flex-direction: column
+		+until-tablet
+			margin-bottom: rem(24)
+
+	.event__name
+		+until-tablet-xl
+			order: 1
+			margin-bottom: 0
+
+	.event__bottom
+		+until-tablet-xl
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+		+until-tablet
+			flex-direction: column
+			align-items: flex-start
+
+	.event__day
+		+until-tablet-xl
+			margin-bottom: 0
+			margin-right: rem(12)
+		+until-tablet
+			margin-right: 0
+			margin-bottom: rem(24)
+
+

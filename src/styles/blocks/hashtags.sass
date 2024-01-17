@@ -1,0 +1,19 @@
+.hashtags
+
+	&__list
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		row-gap: rem(15)
+		column-gap: rem(5)
+
+	&__elem
+		text-transform: uppercase
+		color: var(--gray-dark)
+		font-size: rem(14)
+		font-weight: 500
+		&:not(:last-child)
+			margin-right: rem(24)
+
+	&__link
+		text-decoration: none

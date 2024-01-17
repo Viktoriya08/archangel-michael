@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>archangel-michael</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.ico">
+    <meta property="og:title" content="archangel-michael">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="./img/opengraph-image.jpg">
+    <meta property="og:site_name" content="">
+    <script type="module" crossorigin src="./scripts/vendor.js"></script>
+    <script type="module" crossorigin src="./scripts/index.js"></script>
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body class="inner">
+    <div class="layout">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__bg"><img src="img/footer-logo.svg" alt="alt" loading="lazy">
+          </div>
+          <div class="header__top">
+            <div class="burger"><span></span></div><a class="header__logo" href="#">
+              <div class="logo"><img src="img/logo.svg" alt="alt" loading="lazy">
+              </div>
+              <div class="logo logo--dark"><img src="img/logo-dark.svg" alt="alt" loading="lazy">
+              </div></a>
+            <div class="header__shop"><a class="btn-blank" href="#" target="_blank">
+                <div class="title-underline">RCC Shop</div></a></div>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a class="header__link" href="#">
+                  <div class="title-underline">Новости</div></a></li>
+              <li class="header__item"><a class="header__link" href="#">
+                  <div class="title-underline">Расписание боёв</div></a></li>
+              <li class="header__item"><a class="header__link" href="#">
+                  <div class="title-underline">Бойцы</div></a></li>
+              <li class="header__item"><a class="header__link" href="#">
+                  <div class="title-underline">Для прессы</div></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="page js-paralax">
+        <section class="section">
+          <div class="section__container">
+            <div class="section-grid section-grid--head">
+              <div class="section-grid__left">
+                    <ul class="breadcrumbs" itemtype="https://schema.org/BreadcrumbList">
+                      <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a class="breadcrumbs__link" href="/" title="Главная" itemprop="item">Главная</a>
+                        <meta itemprop="position" content="0">
+                      </li>
+                      <li class="breadcrumbs__item" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a class="breadcrumbs__link" href="#" title="расписание боёв" itemprop="item">расписание боёв</a>
+                        <meta itemprop="position" content="1">
+                      </li>
+                    </ul>
+              </div>
+              <div class="section-grid__right">
+                <h1 class="title">расписание боёв</h1>
+              </div>
+            </div>
+            <div class="section-grid section-grid--border dropdown dropdown--onli-mobile" data-dropdown>
+              <div class="section-grid__left dropdown__head">
+                <div class="section__subtitle">параметры поиска</div>
+              </div>
+              <div class="section-grid__right dropdown__content">
+                <form class="form" action="#">
+                  <div class="form__inputs form__inputs--2">
+                    <div class="default-select">
+                      <select class="default-select__select">
+                        <option data-placeholder="true">БОЕЦ</option>
+                        <option class="icon" value="0" style="--url-img:url(../img/banner/rivals-1.jpg)">пётр ян</option>
+                        <option class="icon" value="1" style="--url-img:url(../img/banner/rivals-2.png)">элджемейн Стерлинг</option>
+                        <option class="icon" value="2" style="--url-img:url(../img/banner/rivals-3.jpg)">иван штырков</option>
+                        <option class="icon" value="3" style="--url-img:url(../img/banner/rivals-1.jpg)">антонио сильва</option>
+                        <option class="icon" value="4" style="--url-img:url(../img/banner/rivals-1.jpg)">иван бандарчук</option>
+                        <option class="icon" value="5" style="--url-img:url(../img/banner/rivals-1.jpg)">джастин гейджи</option>
+                        <option class="icon" value="6" style="--url-img:url(../img/banner/rivals-1.jpg)">антонио сильва</option>
+                        <option class="icon" value="7" style="--url-img:url(../img/banner/rivals-1.jpg)">иван бандарчук</option>
+                        <option class="icon" value="8">джастин гейджи</option>
+                      </select>
+                    </div>
+                    <div class="default-select">
+                      <select class="default-select__select">
+                        <option data-placeholder="true">ТУРНИР</option>
+                        <option value="t-0">ТУРНИР 1</option>
+                        <option value="t-1">ТУРНИР 2</option>
+                        <option value="t-3">ТУРНИР 3</option>
+                        <option value="t-0">ТУРНИР 1</option>
+                        <option value="t-1">ТУРНИР 2</option>
+                        <option value="t-3">ТУРНИР 3</option>
+                        <option value="t-0">ТУРНИР 1</option>
+                        <option value="t-1">ТУРНИР 2</option>
+                        <option value="t-3">ТУРНИР 3</option>
+                        <option value="t-0">ТУРНИР 1</option>
+                        <option value="t-1">ТУРНИР 2</option>
+                        <option value="t-3">ТУРНИР 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form__inputs form__inputs--2">
+                    <div class="default-select">
+                      <select class="default-select__select">
+                        <option data-placeholder="true">ДИСЦИПЛИНА</option>
+                        <option value="d-0">ДИСЦИПЛИНА 1</option>
+                        <option value="d-1">ДИСЦИПЛИНА 2</option>
+                        <option value="d-3">ДИСЦИПЛИНА 3</option>
+                        <option value="d-0">ДИСЦИПЛИНА 1</option>
+                        <option value="d-1">ДИСЦИПЛИНА 2</option>
+                        <option value="d-3">ДИСЦИПЛИНА 3</option>
+                        <option value="d-0">ДИСЦИПЛИНА 1</option>
+                        <option value="d-1">ДИСЦИПЛИНА 2</option>
+                        <option value="d-3">ДИСЦИПЛИНА 3</option>
+                      </select>
+                    </div>
+                    <div class="default-datapicker">
+                      <input class="default-datapicker__input" type="text" placeholder="ПЕРИОД" readonly>
+                      <div class="default-datapicker__box"></div>
+                    </div>
+                  </div>
+                  <div class="form__submit">
+                    <button class="btn" type="submit">ПРИМЕНИТЬ</button>
+                    <button class="btn btn--clear" type="">СБРОСИТЬ ПАРАМЕТРЫ</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="ring ring--white">
+              <div class="ring__box">
+                <h2 class="ring__title">МАЙ</h2>
+                <div class="ring__battles">
+                  <div class="ring__day">
+                    <time datatime="6 мая">6 мая, суббота</time>
+                  </div>
+                  <div class="battle cardRotate">
+                    <div class="battle__time">
+                      <time datatime="18:00">18:00 по мск</time>
+                    </div>
+                    <div class="battle__elem">
+                      <div class="battle__name">
+                        <div class="battle__fighter">пётр ян</div><span>легчайший вес /<span>16-5-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-1.webp" type="image/webp"><img src="img/banner/rivals-1.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__vs">VS</div>
+                    <div class="battle__elem battle__elem--left">
+                      <div class="battle__name">
+                        <div class="battle__fighter">элджемейн Стерлинг</div><span>легчайший вес /<span>22-3-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-2.webp" type="image/webp"><img src="img/banner/rivals-2.png" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__btn">
+                      <button class="btn" tupe="button">трансляция</button>
+                    </div><a class="battle__link" href="#"></a>
+                  </div>
+                  <div class="battle cardRotate">
+                    <div class="battle__time">
+                      <time datatime="19:30">19:30 по мск</time>
+                    </div>
+                    <div class="battle__elem">
+                      <div class="battle__name">
+                        <div class="battle__fighter">иван штырков</div><span>тяжелый вес /<span>22-2-1</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-3.webp" type="image/webp"><img src="img/banner/rivals-3.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__vs">VS</div>
+                    <div class="battle__elem battle__elem--left">
+                      <div class="battle__name">
+                        <div class="battle__fighter">антонио сильва</div><span>тяжелый вес /<span>19-14-1</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-4.webp" type="image/webp"><img src="img/banner/rivals-4.png" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__btn">
+                      <button class="btn btn--transparent" tupe="button">где смотреть?</button>
+                    </div><a class="battle__link" href="#"></a>
+                  </div>
+                </div>
+                <div class="ring__battles">
+                  <div class="ring__day">
+                    <time datatime="7 мая">7 мая, воскресенье</time>
+                  </div>
+                  <div class="battle cardRotate">
+                    <div class="battle__time">
+                      <time datatime="18:00">18:00 по мск</time>
+                    </div>
+                    <div class="battle__elem">
+                      <div class="battle__name">
+                        <div class="battle__fighter">иван бандарчук</div><span>легкий вес /<span>15-3-1</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-5.webp" type="image/webp"><img src="img/banner/rivals-5.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__vs">VS</div>
+                    <div class="battle__elem battle__elem--left">
+                      <div class="battle__name">
+                        <div class="battle__fighter">элджемейн Стерлинг</div><span>легчайший вес /<span>22-3-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-6.webp" type="image/webp"><img src="img/banner/rivals-6.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__btn">
+                      <button class="btn" tupe="button">трансляция</button>
+                    </div><a class="battle__link" href="#"></a>
+                  </div>
+                  <div class="battle cardRotate">
+                    <div class="battle__time">
+                      <time datatime="19:30">19:30 по мск</time>
+                    </div>
+                    <div class="battle__elem">
+                      <div class="battle__name">
+                        <div class="battle__fighter">артур караваев</div><span>средний вес /<span>17-8-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-7.webp" type="image/webp"><img src="img/banner/rivals-7.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__vs">VS</div>
+                    <div class="battle__elem battle__elem--left">
+                      <div class="battle__name">
+                        <div class="battle__fighter">хамзат чимаев</div><span>средний вес /<span>12-0-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-8.webp" type="image/webp"><img src="img/banner/rivals-8.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__btn">
+                      <button class="btn btn--transparent" tupe="button">где смотреть?</button>
+                    </div><a class="battle__link" href="#"></a>
+                  </div>
+                  <div class="battle cardRotate">
+                    <div class="battle__time">
+                      <time datatime="19:30">19:30 по мск</time>
+                    </div>
+                    <div class="battle__elem">
+                      <div class="battle__name">
+                        <div class="battle__fighter">пётр ян</div><span>легчайший вес /<span>16-5-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-1.webp" type="image/webp"><img src="img/banner/rivals-1.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__vs">VS</div>
+                    <div class="battle__elem battle__elem--left">
+                      <div class="battle__name">
+                        <div class="battle__fighter">Юрайя Фейбер</div><span>легчайший вес /<span>35-11-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-9.webp" type="image/webp"><img src="img/banner/rivals-9.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__btn">
+                      <button class="btn btn--transparent" tupe="button">где смотреть?</button>
+                    </div><a class="battle__link" href="#"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="ring__box">
+                <h2 class="ring__title">ИЮНЬ</h2>
+                <div class="ring__battles">
+                  <div class="ring__day">
+                    <time datatime="6 мая">6 июня, суббота</time>
+                  </div>
+                  <div class="battle cardRotate">
+                    <div class="battle__time">
+                      <time datatime="18:00">18:00 по мск</time>
+                    </div>
+                    <div class="battle__elem">
+                      <div class="battle__name">
+                        <div class="battle__fighter">пётр ян</div><span>легчайший вес /<span>16-5-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-1.webp" type="image/webp"><img src="img/banner/rivals-1.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__vs">VS</div>
+                    <div class="battle__elem battle__elem--left">
+                      <div class="battle__name">
+                        <div class="battle__fighter">элджемейн Стерлинг</div><span>легчайший вес /<span>22-3-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-2.webp" type="image/webp"><img src="img/banner/rivals-2.png" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__btn">
+                      <button class="btn" tupe="button">трансляция</button>
+                    </div><a class="battle__link" href="#"></a>
+                  </div>
+                  <div class="battle cardRotate">
+                    <div class="battle__time">
+                      <time datatime="19:30">19:30 по мск</time>
+                    </div>
+                    <div class="battle__elem">
+                      <div class="battle__name">
+                        <div class="battle__fighter">иван штырков</div><span>тяжелый вес /<span>22-2-1</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-3.webp" type="image/webp"><img src="img/banner/rivals-3.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__vs">VS</div>
+                    <div class="battle__elem battle__elem--left">
+                      <div class="battle__name">
+                        <div class="battle__fighter">антонио сильва</div><span>тяжелый вес /<span>19-14-1</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-4.webp" type="image/webp"><img src="img/banner/rivals-4.png" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__btn">
+                      <button class="btn btn--transparent" tupe="button">где смотреть?</button>
+                    </div><a class="battle__link" href="#"></a>
+                  </div>
+                </div>
+                <div class="ring__battles">
+                  <div class="ring__day">
+                    <time datatime="7 мая">7 июня, воскресенье</time>
+                  </div>
+                  <div class="battle cardRotate">
+                    <div class="battle__time">
+                      <time datatime="18:00">18:00 по мск</time>
+                    </div>
+                    <div class="battle__elem">
+                      <div class="battle__name">
+                        <div class="battle__fighter">иван бандарчук</div><span>легкий вес /<span>15-3-1</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-5.webp" type="image/webp"><img src="img/banner/rivals-5.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__vs">VS</div>
+                    <div class="battle__elem battle__elem--left">
+                      <div class="battle__name">
+                        <div class="battle__fighter">элджемейн Стерлинг</div><span>легчайший вес /<span>22-3-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-6.webp" type="image/webp"><img src="img/banner/rivals-6.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__btn">
+                      <button class="btn" tupe="button">трансляция</button>
+                    </div><a class="battle__link" href="#"></a>
+                  </div>
+                  <div class="battle cardRotate">
+                    <div class="battle__time">
+                      <time datatime="19:30">19:30 по мск</time>
+                    </div>
+                    <div class="battle__elem">
+                      <div class="battle__name">
+                        <div class="battle__fighter">артур караваев</div><span>средний вес /<span>17-8-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-7.webp" type="image/webp"><img src="img/banner/rivals-7.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__vs">VS</div>
+                    <div class="battle__elem battle__elem--left">
+                      <div class="battle__name">
+                        <div class="battle__fighter">хамзат чимаев</div><span>средний вес /<span>12-0-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-8.webp" type="image/webp"><img src="img/banner/rivals-8.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__btn">
+                      <button class="btn btn--transparent" tupe="button">где смотреть?</button>
+                    </div><a class="battle__link" href="#"></a>
+                  </div>
+                  <div class="battle cardRotate">
+                    <div class="battle__time">
+                      <time datatime="19:30">19:30 по мск</time>
+                    </div>
+                    <div class="battle__elem">
+                      <div class="battle__name">
+                        <div class="battle__fighter">пётр ян</div><span>легчайший вес /<span>16-5-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-1.webp" type="image/webp"><img src="img/banner/rivals-1.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__vs">VS</div>
+                    <div class="battle__elem battle__elem--left">
+                      <div class="battle__name">
+                        <div class="battle__fighter">Юрайя Фейбер</div><span>легчайший вес /<span>35-11-0</span></span>
+                      </div>
+                      <div class="rivals">
+                        <div class="battle__photo rivals__img">
+                              <picture>
+                                <source srcset="img/banner/rivals-9.webp" type="image/webp"><img src="img/banner/rivals-9.jpg" alt="alt" loading="lazy">
+                              </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="battle__btn">
+                      <button class="btn btn--transparent" tupe="button">где смотреть?</button>
+                    </div><a class="battle__link" href="#"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__logo"><img src="img/footer-logo.svg" alt="alt" loading="lazy">
+          </div>
+          <div class="footer__top">
+            <nav class="footer__nav">
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <div class="title-underline">Новости</div></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <div class="title-underline">Расписание боёв</div></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <div class="title-underline">Бойцы</div></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <div class="title-underline">Для прессы</div></a></li>
+              </ul><a class="btn-blank" href="#" target="_blank" rel="noopener noreferrer">
+                <div class="title-underline">RCC Shop</div></a>
+            </nav>
+            <div class="footer__right">
+              <div class="footer__title">
+                <div class="footer__name"> архангел михаил</div>
+                <p>Цель клуба «Архангел Михаил» – популяризация здорового образа жизни и приобщение к спорту молодое население страны. Клуб даёт возможность молодым и заряженным на победы спортсменам реализовать себя с помощью спорта на профессиональном ринге.</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="social">
+              <div class="social__title">клуб в сети</div>
+              <ul class="social__list">
+                <li class="social__elem"><a class="social__link" href="#" target="_blank" rel="noopener noreferrer">vk</a></li>
+                <li class="social__elem"><a class="social__link" href="#" target="_blank" rel="noopener noreferrer">inst</a></li>
+                <li class="social__elem"><a class="social__link" href="#" target="_blank" rel="noopener noreferrer">tg</a></li>
+                <li class="social__elem"><a class="social__link" href="#" target="_blank" rel="noopener noreferrer">yt</a></li>
+              </ul>
+            </div>
+            <div class="footer__right">
+              <div class="partners">
+                <div class="partners__title title-short">генеральные партнёры</div>
+              </div>
+              <ul class="partners__list">
+                <li class="partners__elem"><a class="partners__link" href="#" target="_blank" rel="noopener noreferrer"><img src="img/rmk.svg" alt="alt" loading="lazy"></a></li>
+                <li class="partners__elem"><a class="partners__link" href="#" target="_blank" rel="noopener noreferrer"><img src="img/rmk-e.svg" alt="alt" loading="lazy"></a></li>
+                <li class="partners__elem"><a class="partners__link" href="#" target="_blank" rel="noopener noreferrer"><img src="img/rmk.svg" alt="alt" loading="lazy"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__sub">
+            <div class="footer__rights">АМ 2023 (c) Все права защищены</div>
+            <div class="footer__line">
+              <div class="footer__span">*Социальная сеть Инстаграм принадлежит Meta Platforms Inc., деятельность которой запрещена на территории РФ.</div>
+            </div><a class="copyright" href="#" target="_blank" rel="noopener noreferrer">Сделано в Xpage</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="popup" id="card-popup">
+      <div class="popup__block">
+        <div class="popup__close"></div>
+        <div class="popup__title">титулы</div>
+        <div class="popup__content">
+          <ul class="card-popup__list">
+            <li class="card-popup__item">
+              <div class="card-popup__name">Чемпион ufc в легчайшем весе</div>
+              <div class="card-popup__icon"><img src="img/card/ufc.svg" alt="alt" loading="lazy">
+              </div>
+            </li>
+            <li class="card-popup__item">
+              <div class="card-popup__name">Чемпион ufc в легчайшем весе</div>
+              <div class="card-popup__icon"><img src="img/card/rcc.svg" alt="alt" loading="lazy">
+              </div>
+            </li>
+          </ul>
+          <div class="card-popup__btns"><a class="btn" href="#">подробнее о бойце</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="broadcast">
+      <div class="popup__block popup__block--bg">
+        <div class="popup__close"></div>
+        <div class="popup__title">трансляция <br> боя</div>
+        <div class="popup__content">
+          <div class="popup__text">
+            <p>Трансляция будет доступна на YouTube канале RCC Media</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nobis quam sequi repellat reiciendis quasi temporibus ipsum commodi veritatis! Sequi?</p>
+            <ul>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+            </ul>
+          </div>
+          <div class="popup__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores at earum perspiciatis nesciunt saepe magni, veniam nobis enim dolorum incidunt excepturi corporis voluptatibus! Totam perspiciatis modi atque iste praesentium soluta.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quam doloremque quas id temporibus adipisci.</p>
+          </div>
+          <div class="popup__btns"><a class="btn" href="#">перейти</a></div>
+        </div>
+        <div class="popup__content">
+          <div class="popup__text">
+            <p>Трансляция будет доступна на YouTube канале RCC Media</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nobis quam sequi repellat reiciendis quasi temporibus ipsum commodi veritatis! Sequi?</p>
+            <ul>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+            </ul>
+          </div>
+          <div class="popup__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores at earum perspiciatis nesciunt saepe magni, veniam nobis enim dolorum incidunt excepturi corporis voluptatibus! Totam perspiciatis modi atque iste praesentium soluta.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quam doloremque quas id temporibus adipisci.</p>
+          </div>
+          <div class="popup__btns"><a class="btn" href="#">перейти</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="broadcast-2">
+      <div class="popup__block popup__block--bg">
+        <div class="popup__close"></div>
+        <div class="popup__title">трансляция <br> боя</div>
+        <div class="popup__content">
+          <div class="popup__text">
+            <p>Трансляция будет доступна на телеканале МатчТВ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

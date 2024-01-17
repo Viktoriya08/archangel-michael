@@ -1,0 +1,54 @@
+.dropdown
+
+	&__head
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		&::after
+			content: " "
+			display: block
+			width: rem(30)
+			height: rem(30)
+			background-image: url("data:image/svg+xml,%3Csvg width='22' height='13' viewBox='0 0 22 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 12L11 2L21 12' stroke='%23333333' stroke-width='2'/%3E%3C/svg%3E")
+			background-position: center
+			background-repeat: no-repeat
+			background-size: auto
+			transform: rotate(180deg)
+			flex: none
+
+	&.active
+
+		.dropdown__head
+			&::after
+				transform: rotate(0deg)
+
+		.dropdown__content
+			overflow: visible
+
+	&__content
+		height: 0
+		overflow: hidden
+		transition: .3s
+
+	&--onli-mobile
+
+		+until-tablet-xl
+			&.section-grid
+				gap: 0
+
+			.form
+				padding-top: rem(45)
+
+		+from-tablet-xl
+			.dropdown__head
+				pointer-events: none
+				display: block
+
+				&::after
+					display: none
+
+			.dropdown__content
+				height: auto
+				overflow: visible
+

@@ -1,0 +1,31 @@
+.default-slider
+	overflow: hidden
+	// стили для секции паралакс внизу
+	position: relative
+	z-index: 1
+	background-color: var(--color-white)
+	padding-bottom: rem(120)
+	+until-tablet-xl
+		padding-bottom: rem(110)
+	+until-tablet
+		padding-bottom: rem(80)
+
+	// / стили для паралакс
+
+	.swiper
+		overflow: visible
+
+	.swiper-slide
+		height: auto
+
+	.card
+		height: 100%
+
+	.card__content
+		display: flex
+		flex-direction: column
+		flex-grow: 1
+
+	.card__title
+		flex-grow: 1
+

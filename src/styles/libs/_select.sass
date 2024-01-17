@@ -1,0 +1,145 @@
+// @import 'slim-select/dist/slimselect.css'
+@import "./slim-select"
+
+
+.default-select
+	display: flex
+	flex-direction: column-reverse
+	// Стили до загрузки js
+	select.default-select__select
+		border-bottom: 1px solid var(--gold)
+		height: rem(54)
+		color: inherit
+		background-color: $c-white
+		width: 100%
+		padding: rem(20) 0
+		transition: border-color .3s ease
+		font-size: rem(14)
+		text-transform: uppercase
+		+hide-scroll
+	&__label
+		font-size: em(14)
+		margin-bottom: em(8)
+		color: $c-black
+	&__select
+		// Для стилизации плагина используем css переменные
+		--ss-border-color: #{$c-border}
+		--ss-main-height: #{em(48)}
+		--ss-spacing-s: #{em(0) em(12)}
+		--ss-font-color: #{$c-black}
+		--ss-border-radius: #{em(0)}
+		--ss-primary-color: #{$c-main}
+		--ss-highlight-color: #{$c-second}
+
+	.icon
+		display: flex
+		align-items: center
+		&::before
+			content: ' '
+			display: block
+			width: rem(24)
+			height: rem(24)
+			border-radius: 50%
+			background-color: var(--bg)
+			margin-right: rem(8)
+			background-image: var(--url-img)
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+
+
+	.ss-main
+		border-color: transparent
+		border-bottom: 1px solid var(--gold)
+		//color: var(--gray-dark)
+		height: rem(54)
+		color: inherit
+		background-color: $c-white
+		width: 100%
+		padding: rem(20) 0
+		transition: .3s ease
+		font-size: rem(14)
+		font-weight: 500
+		text-transform: uppercase
+		&:focus
+			box-shadow: none
+			background-color: var(--gray)
+		&:hover
+			background-color: var(--gray)
+
+		&.ss-open-below
+			background-color: var(--gray)
+
+		.ss-arrow
+			width: rem(17)
+			height: rem(15)
+
+			path
+				stroke-width: rem(10)
+
+		.ss-values
+			.ss-placeholder
+				color: var(--gray-dark)
+
+	.ss-values
+		align-items: center
+		.ss-value
+			.ss-value-text
+				height: rem(16)
+				line-height: rem(16)
+				padding: 0 em(5)
+			.ss-value-delete
+				padding: 0
+				margin: 0 em(5)
+				width: max-content
+				border-left: 0
+				svg
+					display: block
+					size: em(6)
+		.ss-max
+			height: rem(16)
+			line-height: rem(16)
+			padding: 0 em(5)
+	.ss-option
+		transition: 0.3s
+
+
+	.ss-content
+		padding: rem(8) 0
+		background-color: var(--gray)
+
+		&.ss-open-below
+			border: none
+			border-top: 2px solid var(--gold)
+
+		.ss-search
+			input
+				&:focus
+					box-shadow: none
+
+		.ss-list
+			max-height: rem(170)
+			+Vscroll()
+			scrollbar-color: $c-second var(--gray)
+			&::-webkit-scrollbar /* 1 - скроллбар */
+				width: 4px
+				scrollbar-color: var(--gray) var(--border)
+			&::-webkit-scrollbar-track /* 3 - трек */
+					background: var(--gray)
+			&::-webkit-scrollbar-thumb /* 5 - ползунок */
+				background-color: var(--gray)
+				border: 2px solid var(--border)
+
+			.ss-option
+				text-transform: uppercase
+				padding: rem(6) rem(12)
+				font-size: rem(14)
+				font-weight: 500
+
+				&:hover
+					background-color: var(--gold)
+					color: var(--ss-primary-color)
+
+				&.ss-selected
+					background-color: var(--gold)
+					color: var(--ss-primary-color)

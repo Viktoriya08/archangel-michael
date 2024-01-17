@@ -1,0 +1,170 @@
+.news
+	overflow: hidden
+	position: relative
+	z-index: 1
+
+	.swiper
+		overflow: visible
+		.swiper-pagination
+			+until-tablet
+				margin-top: rem(20)
+
+	.swiper-slide
+		width: 49%
+
+		&.swiper-slide-active
+
+			.news__title
+				font-size: fluid(18, 32)
+				+cutString(3)
+
+	.swiper-slide:nth-child(2n)
+		width: 33%
+
+	.swiper-slide:nth-child(3n)
+		width: 40%
+
+	&__slider
+		&.news-slider-js
+			.news__card
+				height: rem(560)
+
+				+until-desktop-xl
+					height: rem(500)
+
+				+until-tablet
+					height: auto
+
+	&__card
+		max-width: rem(670)
+		position: relative
+		transition: .3s
+
+		+until-tablet
+			min-height: rem(450)
+		&:hover
+			.news__title
+				text-decoration: underline
+
+		.tags
+			position: absolute
+
+		&--grey
+			padding: fluid(12, 24)
+			padding-right: fluid(12, 35)
+			background-color: var(--gray)
+
+			.tags
+				position: static
+				margin-bottom: rem(20)
+			.news__data
+				margin-bottom: 0
+
+		&--row
+			display: flex
+			max-width: none
+			padding: rem(24) 0
+
+			.news__img
+				width: rem(325)
+				min-height: rem(192)
+				flex: 0 0 auto
+				margin-bottom: 0
+				margin-right: rem(20)
+
+			.news__content
+				max-width: rem(440)
+
+			.news__text
+				+cutString(4)
+
+			+until-tablet
+				flex-direction: column
+				min-height: auto
+
+				.news__img
+					width: 100%
+					margin-bottom: rem(20)
+
+				.news__content
+					max-width: 100%
+
+		&--border
+			border-top: 1px solid var(--border)
+
+			&:last-child
+				border-bottom: 1px solid var(--border)
+
+	&__link
+		position: absolute
+		width: 100%
+		top: 0
+		left: 0
+		bottom: 0
+		z-index: 2
+
+	&__img
+		min-height: rem(270)
+		max-height: rem(410)
+		// background-image: url('../img/wings-gray.jpg')
+		background-color: var(--gray)
+		background-image: url("data:image/svg+xml,%3Csvg width='269' height='294' viewBox='0 0 269 294' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.05'%3E%3Cpath d='M131.194 241.707L124.772 238.037C125.873 272.899 130.43 289.566 132.571 293.541L131.194 241.707Z' fill='%23141414'/%3E%3Cpath d='M136.695 242.165L143.118 238.495C142.017 273.358 137.46 290.025 135.319 294L136.695 242.165Z' fill='%23141414'/%3E%3Cpath d='M110.092 144C103.853 164.55 110.245 185.437 113.761 193.082L105.505 207.761L105.963 199.046L97.2477 205.926L75.2294 200.88L95.8716 188.495L70.1835 194L40.8257 184.367L88.5321 178.862L34.4037 173.816L7.33945 149.046L87.156 166.935L22.9358 138.954L0 101.798L87.156 155.009L19.2661 98.5868L5.50459 45.8345L85.7798 135.743L31.6514 60.0547L26.1468 0.880371L110.092 144Z' fill='%23141414'/%3E%3Cpath d='M158.258 144C164.496 164.55 158.104 185.437 154.588 193.082L162.845 207.761L162.386 199.046L171.102 205.926L193.12 200.88L172.478 188.495L198.166 194L227.524 184.367L179.817 178.862L233.946 173.816L261.01 149.046L181.193 166.935L245.414 138.954L268.349 101.798L181.193 155.009L249.083 98.5868L262.845 45.8345L182.57 135.743L236.698 60.0547L242.203 0.880371L158.258 144Z' fill='%23141414'/%3E%3Cpath d='M91.7461 232.991L133.948 156.385L176.608 232.991L166.975 244.917L154.131 221.064C149.85 225.805 139.819 235.56 133.948 236.66C128.076 237.761 117.74 226.722 113.306 221.064L100.462 244.917L91.7461 232.991Z' fill='%23141414'/%3E%3C/g%3E%3C/svg%3E")
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		position: relative
+		margin-bottom: rem(24)
+		display: flex
+
+		picture
+			display: block
+			width: 100%
+			height: auto
+
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&__content
+		max-width: 95%
+
+	&__data
+		color: var(--gray-dark)
+		text-transform: uppercase
+		font-size: rem(14)
+		line-height: 120%
+		font-weight: 500
+		margin-bottom: rem(24)
+
+	&__title
+		width: fit-content
+		text-transform: uppercase
+		font-size: fluid(16, 20)
+		line-height: 120%
+		font-weight: 500
+		margin-bottom: rem(24)
+		transition: .3s
+		+cutString(3)
+
+	&__text
+		font-family: "roboto", sans-serif
+		color: var(--gray-dark)
+		font-size: fluid(14, 16)
+		line-height: 120%
+		letter-spacing: 0
+		+cutString(2)
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		gap: rem(20)
+		+until-tablet-xl
+			grid-template-columns: repeat(2, 1fr)
+		+until-tablet
+			grid-template-columns: 100%
+
+
+
+

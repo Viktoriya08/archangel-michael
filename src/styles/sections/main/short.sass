@@ -1,0 +1,163 @@
+.short
+	overflow: hidden
+	// background-color: var(--gray)
+
+	&--noslider
+		overflow: visible
+
+		.swiper-slide
+			&:last-child
+				.short__elem
+					border-bottom: 1px solid var(--border)
+
+		+until-tablet-xl
+
+			.swiper-slide
+				&:last-child
+					.short__elem
+						border-bottom: none
+
+			.short__elem--border
+				border-top: none
+				border-bottom: none
+
+			.short__mobile
+				border-top: 1px solid var(--border)
+
+			.swiper-pagination
+				margin-top: rem(15)
+
+			.title-short
+				margin-bottom: rem(24) !important
+
+
+	.swiper
+		overflow: visible
+
+	&__btns
+		display: flex
+		> *
+			flex: none
+			&:first-child
+				margin-right: rem(8)
+				+until-tablet
+					margin-right: 0
+
+	.title-short
+		margin-bottom: rem(65)
+		@media screen and (max-width: 1900px)
+			margin-bottom: rem(40)
+		+until-tablet-xl
+			margin-bottom: rem(30)
+		+until-tablet
+			margin-bottom: rem(20)
+		@media screen and (max-width: 450px)
+			margin-bottom: rem(50)
+
+	&__left
+		width: 31%
+		padding-top: rem(40)
+		margin-left: rem(-20)
+		background-color: var(--color-white)
+		position: relative
+		z-index: 2
+		@media screen and (min-width: 2000px)
+			width: 50%
+		+until-tablet
+			width: 45%
+			padding-top: rem(20)
+
+	&__right
+		// max-width: rem(1075)
+		width: 75%
+		margin-left: 0
+		background-color: var(--gray)
+		@media screen and (min-width: 2000px)
+			width: 60%
+		@media screen and (min-width: 3000px)
+			width: 60%
+		+until-tablet
+			width: 65%
+
+	&__title
+		position: absolute
+		top: rem(40)
+		left: rem(20)
+		z-index: 5
+		max-width: rem(325)
+		padding: 0 rem(20)
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		+until-tablet-xl
+			top: rem(20)
+		+until-tablet
+			top: rem(10)
+			left: 0
+
+	&__container
+		width: 100%
+		position: relative
+
+
+	&__box
+		display: flex
+		justify-content: center
+
+	&__slider
+		min-width: 0
+		// max-width: rem(1075)
+		//width: 80%
+		margin-left: 0
+		background-color: var(--gray)
+		// @media screen and (min-width: 2000px)
+		// 	width: 50%
+
+	&__elem
+		background-color: var(--gray)
+		padding: rem(40) rem(20)
+		padding-right: rem(40)
+		height: 100%
+		display: flex
+		flex-direction: column
+		height: 100%
+		justify-content: space-between
+		+until-tablet-xl
+			padding: rem(20)
+		+until-tablet
+			padding: rem(10)
+
+		&--white
+			background-color: var(--color-white)
+			padding: rem(24)
+			padding-left: 0
+			height: auto
+		&--border
+			border-top: 1px solid var(--border)
+
+
+	&__name
+		font-size: fluid(14, 16)
+		line-height: 122%
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: -0.02em
+		margin-bottom: fluid(10, 25)
+		+cutString(4)
+		@media screen and (max-width: 1900px)
+			+cutString(3)
+		@media screen and (max-width: 1020px)
+			+cutString(3)
+		+until-tablet
+			+cutString(3)
+		@media screen and (max-width: 445px)
+			+cutString(5)
+
+	&__data
+		font-size: fluid(12, 14)
+		line-height: 100%
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: -0.02em
+		color: var(--gray-dark)

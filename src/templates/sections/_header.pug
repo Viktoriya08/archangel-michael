@@ -1,0 +1,33 @@
+header.header
+	.header__container
+
+		.header__bg
+			+image('img/footer-logo.svg', 'alt')
+
+		.header__top
+			.burger
+				span
+			a(href="#").header__logo
+				.logo
+					+image('img/logo.svg', 'alt')
+				.logo.logo--dark
+					+image('img/logo-dark.svg', 'alt')
+			.header__shop
+				a.btn-blank(href="#" target="_blank")
+					.title-underline RCC Shop
+
+		nav.header__nav
+			ul.header__list
+				li.header__item
+					a(href="#").header__link
+						.title-underline Новости
+				li.header__item
+					a(href="#").header__link
+						.title-underline Расписание боёв
+				li.header__item
+					a(href="#").header__link
+						.title-underline Бойцы
+				li.header__item
+					a(href="#").header__link
+						.title-underline Для прессы
+

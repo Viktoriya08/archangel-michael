@@ -1,0 +1,258 @@
+.section
+	margin-top: rem(120)
+	+until-tablet-xl
+		margin-top: rem(110)
+	+until-tablet
+		margin-top: rem(80)
+
+	&--grey
+		background-color: var(--gray) !important
+		padding: rem(80) 0
+
+		// &:last-child
+		// 	margin-bottom: rem(-120)
+		+until-tablet
+			padding: rem(40) 0
+			// &:last-child
+			// 	margin-bottom: rem(-50)
+			// news-detal.html НОВОСТИ ПО ТЕМЕ
+
+	&--white
+		background-color: var(--color-white)
+
+	&--border
+
+		[class*="__container"]
+			border-top: 1px solid var(--border)
+			padding-top: fluid(40, 80)
+
+	&--padding
+		margin-top: 0
+		padding-top: fluid(50, 120)
+		+until-tablet-xl
+			margin-top: 0
+		+until-tablet
+			margin-top: 0
+
+	&:first-child
+		margin-top: 0
+		padding-top: fluid(80, 200)
+	&:last-child
+		padding-bottom: rem(120)
+		+until-tablet-xl
+			padding-bottom: rem(110)
+		+until-tablet
+			padding-bottom: rem(80)
+
+	&[data-paralax]
+		position: relative
+		z-index: 1
+
+	&__img
+		height: fluid(300, 800)
+		margin-bottom: fluid(20, 40)
+		margin-left: rem(-40)
+		margin-right: rem(-40)
+		+until-tablet
+			margin-left: rem(-15)
+			margin-right: rem(-15)
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+		+ .section-grid
+			margin-top: fluid(40, 80)
+			&:not(:first-child)
+				margin-top: fluid(40, 80)
+
+	&__slider
+		margin-top: fluid(20, 40)
+		margin-bottom: fluid(10, 30)
+		max-height: rem(400)
+		+until-tablet-xl
+			max-height: none
+
+	&__subtitle
+		margin-top: rem(20)
+		font-size: rem(20)
+		font-weight: 500
+		text-transform: uppercase
+		max-width: rem(150)
+		+until-tablet-xl
+			margin-top: rem(0)
+		+until-tablet
+			font-size: rem(16)
+
+
+	.big-slider
+		+until-tablet-xl
+			margin-left: rem(-20)
+			margin-right: rem(-20)
+
+	.news__card
+		height: auto
+
+	.news__card--row
+		.news__img
+			width: rem(240)
+			height: rem(140)
+			min-height: auto
+			+until-tablet
+				width: 100%
+				height: auto
+
+	.news__title
+		margin-bottom: rem(12)
+
+	// не помню зачем, меняет шрифт на главной в новостях
+	// .news__text
+	// 	font-size: rem(14)
+
+	.error
+		margin-top: rem(40)
+		margin-right: 15%
+		justify-content: flex-end
+		+until-tablet-xl
+			justify-content: center
+			margin-right: 0
+
+
+.section-grid
+	display: grid
+	grid-template-columns: repeat(12, 1fr)
+	gap: rem(20)
+
+	&:not(:last-child)
+		margin-bottom: rem(40)
+		+until-tablet
+			margin-bottom: rem(20)
+	&:not(:first-child)
+		margin-top: rem(40)
+		+until-tablet
+			margin-top: rem(20)
+
+	&--head
+		.tags
+			margin-bottom: fluid(15, 24)
+
+	&--border
+		padding: rem(24) 0
+		border-top: 1px solid var(--border)
+		border-bottom: 1px solid var(--border)
+
+	&.section-grid--tablet
+		+until-tablet-xl
+			grid-template-columns: repeat(12, 1fr)
+
+			.section-grid__left
+				grid-column: 1/5
+			.section-grid__right
+				grid-column: 7/-1
+
+		+until-tablet
+			grid-template-columns: 100%
+			.section-grid__left, .section-grid__right
+				grid-column: 1/-1
+
+	&--border-mobile
+		+until-tablet-xl
+			padding: rem(24) 0
+			border-top: 1px solid var(--border)
+			border-bottom: 1px solid var(--border)
+
+			.news__card--border,
+			.news__card--border:last-child,
+			.share__list
+				border: none
+
+			.news__card--row
+				padding: 0
+
+			.share__list
+				padding: 0
+				padding-top: rem(20)
+
+		+until-tablet
+			.share__list
+				padding: 0
+
+	+until-tablet-xl
+		grid-template-columns: 100%
+
+	&__left
+		grid-column: 1/4
+		+until-tablet-xl
+			grid-column: 1/-1
+
+			&--short
+				display: none
+
+
+	&__right
+		grid-column: 4/10
+		+until-tablet-xl
+			grid-column: 1/-1
+
+		&--wide
+			grid-column: 4/-1
+			+until-tablet-xl
+				grid-column: 1/-1
+
+
+.section-slider
+	position: relative
+
+	&__img
+		position: relative
+		&::before,
+		&::after
+			content: ' '
+			display: block
+			position: absolute
+			top: 0
+			height: 100%
+			width: rem(35)
+			background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
+
+		&::before
+			left: 0
+
+		&::after
+			right: 0
+			transform: rotate(180deg)
+
+	&__btn
+		position: absolute
+		top: 50%
+		transform: translate(0, -50%)
+		height: rem(40)
+		width: rem(40)
+		z-index: 1
+		background-color: var(--color-white)
+		mask:
+			image: url("data:image/svg+xml,%3Csvg width='18' height='32' viewBox='0 0 18 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 31L16.5 16L1.5 1' stroke='white' stroke-width='2'/%3E%3C/svg%3E")
+			repeat: no-repeat
+			position: center
+		transition: background-color 0.3s
+		cursor: pointer
+		&--prev
+			left: 0
+			transform: rotate(-180deg) translate(0, 50%)
+		&--next
+			right: 0
+		&:hover:not(.swiper-button-disabled)
+			background-color: var(--color-text)
+
+		&.swiper-button-disabled
+			cursor: not-allowed
+
+	&__text
+		font-family: "roboto", sans-serif
+		padding-top: rem(12)
+		font-size: rem(14)
+		line-height: 120%
+		color: var(--gray-dark)
+
+

@@ -1,0 +1,20 @@
+extends /base/_head
+block content
+	body.inner
+		.layout
+			//-HEADER
+			include /sections/_header
+			main.page.js-paralax
+
+				section.section
+					.section__container
+						include /sections/press/_top
+
+						include /sections/press/_content
+
+			//-FOOTER
+			include /sections/_footer
+		//- POPUPS
+		include /popups/_all
+		//- SCRIPTS
+		include /base/_scripts

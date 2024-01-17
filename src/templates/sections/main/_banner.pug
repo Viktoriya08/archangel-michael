@@ -1,0 +1,181 @@
+section.main-banner
+
+	.main-banner__slider(data-custom-cursor=".custom-cursor")
+		.swiper.mb-slider-js
+			.main-banner__wrapper.swiper-wrapper
+				.swiper-slide
+					.main-banner__slide
+						.main-banner__el.main-banner__el--duel
+							.main-banner__container
+								.main-banner__img
+
+									picture
+										source(media="(min-width: 1200px)", srcset="img/main-slider/duel-2.png")
+										source(media="(min-width: 768px)", srcset="img/main-slider/duel-2.png")
+										source(media="(max-width: 767px)", srcset="img/main-slider/yn-mb.png")
+										img(src="img/main-slider/duel-2.png" alt="" loading="lazy")
+
+								.main-banner__content
+									.main-banner__code ufc 267
+									//- вариант заголовка, если вводить контентом
+									//-.title-duel пётр ян <sup>vs</sup> <br>элджемейн стерлинг
+									.title-duel.title-duel--flex
+										.title-duel__el Ян
+										.title-duel__el стерлинг
+									.rivals
+										.rivals__img
+											+image('img/main-slider/rivals-1.jpg', 'alt')
+										.rivals__img
+											+image('img/main-slider/rivals-2.png', 'alt')
+									.main-banner__bottom
+										.main-banner__data
+											p 30 октября
+											span понедельник / 04:00 по мск
+										a(href="#", target="_blank" data-default-cursor).btn.main-banner__btn трансляция
+							.main-banner__progress
+								span
+
+				.swiper-slide
+					.main-banner__slide
+						.main-banner__el.main-banner__el--duel
+							.main-banner__container
+								.main-banner__img
+									picture
+										source(srcset="img/main-slider/duel_1-mb.png" media="(max-width: 767px)")
+										img(src="img/main-slider/duel-1.png" alt="" loading="lazy")
+
+								.main-banner__content
+									.main-banner__code rcc 245
+									//- .title-duel иван штырков <sup>vs</sup> <br>антонио сильва
+									.title-duel.title-duel--flex
+										.title-duel__el штырков
+										.title-duel__el сильва
+									.rivals
+										.rivals__img
+											+image('img/main-slider/rivals-3.jpg', 'alt')
+										.rivals__img
+											+image('img/main-slider//no-photo-mini.png', 'alt')
+									.main-banner__bottom
+										.main-banner__data
+											p 1 ноября
+											span понедельник / 04:00 по мск
+										a(href="#", target="_blank" data-default-cursor).btn.btn--transparent.main-banner__btn где смотреть?
+							.main-banner__progress
+								span
+
+				.swiper-slide
+					.main-banner__slide
+						.main-banner__el
+							.main-banner__bg
+								picture
+									source(media="(min-width: 1200px)" srcset="img/main-slider/banner-1.jpg")
+									source(media="(min-width: 768px)" srcset="img/main-slider/banner-1_tabl.jpg")
+									source(media="(max-width: 767px)" srcset="img/main-slider/banner-1_mob.jpg")
+									img(src="img/main-slider-1.jpg" alt="" loading="lazy")
+							.main-banner__container
+
+								.main-banner__content
+									.main-banner__name бойцовский клуб архангел михаил
+									.title двигаем в массы здоровый образ жизни и&nbsp;приобщаем к&nbsp;спорту молодое население страны
+
+									.main-banner__bottom
+										.main-banner__btns
+											a(href="#", target="_blank" data-default-cursor).btn.btn--transparent.main-banner__btn vkontakte
+											a(href="#", target="_blank" data-default-cursor).btn.btn--transparent.main-banner__btn instagram
+							.main-banner__progress
+								span
+
+				.swiper-slide
+					.main-banner__slide
+						//- класс .main-banner__el--text-left выровняет текст по левому краю
+						.main-banner__el.main-banner__el--text-left
+							.main-banner__bg
+								picture
+									source(media="(min-width: 1200px)", srcset="img/main-slider/banner-2.jpg")
+									source(media="(min-width: 768px)", srcset="img/main-slider/banner-2_tabl.jpg")
+									source(media="(max-width: 767px)", srcset="img/main-slider/banner-2_mob.jpg")
+									img(src="img/main-slider/banner-2.jpg" alt="" loading="lazy")
+							.main-banner__container
+
+								.main-banner__content
+									.title двигаем в массы здоровый образ жизни и&nbsp;приобщаем к&nbsp;спорту молодое население страны
+
+									.main-banner__bottom
+										.main-banner__btns
+											a(href="#", target="_blank" data-default-cursor).btn.btn--transparent.main-banner__btn vkontakte
+							.main-banner__progress
+								span
+
+				.swiper-slide
+					.main-banner__slide
+						.main-banner__el
+							.main-banner__bg
+								picture
+									source(media="(min-width: 768px)", srcset="img/main-slider/banner-2.jpg")
+									source(media="(max-width: 767px)", srcset="img/main-slider/banner-2_mob.jpg")
+									img(src="img/main-slider/banner-2.jpg" alt="" loading="lazy")
+							.main-banner__container
+
+								.main-banner__content
+									.main-banner__name бойцовский клуб архангел михаил
+									.title двигаем в массы здоровый образ жизни и&nbsp;приобщаем к&nbsp;спорту молодое население страны
+
+									.main-banner__bottom
+										.main-banner__btns
+											a(href="#", target="_blank" data-default-cursor).btn.btn--transparent.main-banner__btn vkontakte
+											a(href="#", target="_blank" data-default-cursor).btn.btn--transparent.main-banner__btn instagram
+							.main-banner__progress
+								span
+
+				.swiper-slide
+					.main-banner__slide
+						.main-banner__el
+							.main-banner__bg
+								//-+image('img/header-bg.jpg', 'alt')
+								picture
+									source(media="(min-width: 768px)", srcset="img/main-slider/banner-1.jpg")
+									source(media="(max-width: 767px)", srcset="img/main-slider/banner-1_mob.jpg")
+									img(src="img/main-slider-1.jpg" alt="" loading="lazy")
+							.main-banner__container
+
+								.main-banner__content
+									.main-banner__name бойцовский клуб архангел михаил
+									.title двигаем в массы здоровый образ жизни и&nbsp;приобщаем к&nbsp;спорту молодое население страны
+
+									.main-banner__bottom
+										.main-banner__btns
+											a(href="#", target="_blank" data-default-cursor).btn.btn--transparent.main-banner__btn действие
+							.main-banner__progress
+								span
+
+				.swiper-slide
+					.main-banner__slide
+						//-main-banner__el--text-bigger - увеличит размер шрифта h1
+						.main-banner__el.main-banner__el--text-left.main-banner__el--text-bigger.main-banner__el--logo
+							.main-banner__bg
+								+image('img/default-bg.jpg', 'alt')
+
+							.main-banner__container
+
+								.main-banner__logo
+									+image('img/logo-bg.svg', 'alt')
+
+								.main-banner__content
+
+									.title двигаем в массы здоровый образ жизни и&nbsp;приобщаем к&nbsp;спорту молодое население страны
+
+									.main-banner__bottom
+										.main-banner__btns
+											a(href="#", target="_blank" data-default-cursor).btn.btn--transparent.main-banner__btn подробнее
+							.main-banner__progress
+								span
+
+			.main-banner__buttons
+				button(type="button").main-banner__button.main-banner__button--prev
+				button(type="button").main-banner__button.main-banner__button--next
+		.custom-cursor.btn-slider.btn-slider--circle
+
+
+
+
+

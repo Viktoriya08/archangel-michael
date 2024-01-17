@@ -1,0 +1,77 @@
+section.section.personal-info
+	.section__container
+		.section-grid
+
+			.section-grid__left
+				.section__subtitle информация <br>о бойце
+
+			.section-grid__right.info
+				.personal-info__total 21
+					span всего боёв
+
+				.info__list.info__list--2.numbers-count
+					.info__elem
+						.info__name победы
+						.personal-count
+							//- .personal-count__circle(style="--line: 280deg")
+							//- .personal-count__data(data-counter) 16
+							.circle
+								//- Перемнная --line: задает линию програсса, 0 - полная загрузка, 628 - минимальная
+								svg.circle__svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210" height="210" viewBox="0 0 210 210")
+									circle#circ(transform="rotate(-90 105 105)" cx="105" cy="105" r="100" style="--line: 120")
+
+							.personal-count__data(data-counter) 16
+
+
+					.info__elem
+						.info__name досрочно
+						.personal-count
+							.circle
+								//- Перемнная --line: задает линию програсса, 0 - полная загрузка, 628 - минимальная
+								svg.circle__svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210" height="210" viewBox="0 0 210 210")
+									circle#circ(transform="rotate(-90 105 105)" cx="105" cy="105" r="100" style="--line: 370")
+
+							.personal-count__data(data-counter) 8
+					.info__elem
+						.info__name поражения
+						.personal-count
+							.circle
+								//- Перемнная --line: задает линию програсса, 0 - полная загрузка, 628 - минимальная
+								svg.circle__svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210" height="210" viewBox="0 0 210 210")
+									circle#circ(transform="rotate(-90 105 105)" cx="105" cy="105" r="100" style="--line: 520")
+							.personal-count__data(data-counter) 5
+					.info__elem
+						.info__name ничьи
+						.personal-count
+							.circle
+								//- Перемнная --line: задает линию програсса, 0 - полная загрузка, 628 - минимальная
+								svg.circle__svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210" height="210" viewBox="0 0 210 210")
+									circle#circ(transform="rotate(-90 105 105)" cx="105" cy="105" r="100" style="--line: 628")
+							.personal-count__data(data-counter) 0
+
+				ul.info__list
+					li.info__elem
+						.info__name вес
+						.info__data 62 кг
+
+					li.info__elem
+						.info__name весовая категория
+						.info__data легчайшая
+
+					li.info__elem
+						.info__name рост
+						.info__data 171 см
+
+					li.info__elem
+						.info__name дебют
+						.info__data 12.01.2014
+
+					li.info__elem
+						.info__name город
+						.info__data екатеринбург
+
+					li.info__elem
+						.info__name соц сети
+						.info__data
+							a(href="#").info__link.title-underline inst
+							a(href="#").info__link.title-underline vk

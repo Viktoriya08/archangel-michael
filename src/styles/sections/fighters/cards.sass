@@ -1,0 +1,26 @@
+.cards
+
+	.tabs
+		margin-top: fluid(20, 40)
+		+until-tablet
+			padding: 0 rem(20)
+			margin-right: rem(-20)
+			margin-left: rem(-20)
+
+	.head-section
+		margin-bottom: fluid(20, 40)
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		column-gap: rem(20)
+		row-gap: rem(40)
+		+until-desktop-xl
+			grid-template-columns: repeat(3, 1fr)
+		+until-tablet-xl
+			grid-template-columns: repeat(2, 1fr)
+		+until-tablet
+			grid-template-columns: repeat(1, 1fr)
+
+	.card__photo
+		background-image: none

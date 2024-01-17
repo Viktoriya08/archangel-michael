@@ -1,0 +1,245 @@
+.video
+	background-color: var(--color-text)
+	position: relative
+	overflow: hidden
+	// height: 75vh
+	aspect-ratio: 3 / 2
+	width: 100%
+	// max-height: rem(900)
+	@media ( min-width: 1920px )
+		aspect-ratio: 2 / 1
+		width: 100%
+	+until-tablet-xl
+		height: rem(480)
+
+	&.play-video
+		& .video__bg
+			opacity: 0
+
+
+	&__container
+		padding-top: rem(40)
+		position: relative
+		z-index: 1
+		height: 100%
+		min-height: rem(200)
+		box-sizing: border-box
+		+until-tablet
+			height: 100%
+			padding-top: rem(20)
+
+	&__video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: cover
+
+		&.play
+			z-index: 1
+
+
+		&--mobile
+			display: none
+			+until-tablet
+				display: block
+
+	&__bg
+		position: absolute
+		width: 100%
+		top: 0
+		left: 0
+		bottom: 0
+		z-index: 1
+		opacity: 1
+		transition: 1s
+		&::before
+			content: ' '
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: #00000066
+
+
+		img
+			width: 100%
+			height: 100%
+			display: block
+			object-fit: cover
+
+	&__title
+		color: var(--color-white)
+		width: auto
+
+	&__play
+		position: absolute
+		bottom: 50%
+		right: 50%
+		transform: translate(50%, 50%)
+		cursor: pointer
+		width: fluid(120, 240)
+		height: fluid(120, 240)
+		background-image: url("data:image/svg+xml,%3Csvg width='240' height='240' viewBox='0 0 240 240' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M162.052 18.4638L162.062 18.4676L204.469 35.5315L221.532 77.9384L221.536 77.9478L239.456 120L221.536 162.052L221.532 162.062L204.469 204.469L162.062 221.532L162.052 221.536L120 239.456L77.9478 221.536L77.9384 221.532L35.5315 204.469L18.4677 162.062L18.4637 162.052L0.543506 120L18.4637 77.9478L18.4638 77.9478L18.4676 77.9384L35.5315 35.5315L77.9384 18.4676L77.9384 18.4677L77.9478 18.4637L120 0.543506L162.052 18.4638Z' stroke='white'/%3E%3Cpath d='M142 120L98 98V142L142 120Z' stroke='white'/%3E%3C/svg%3E")
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		transition: .3s
+		&:hover
+			transform: translate(50%, 50%) scale(1.2)
+
+		&.hide
+			bottom: rem(20)
+			right: rem(20)
+			width: fluid(50, 100)
+			height: fluid(50, 100)
+			transform: translate(0, 0)
+			@media ( min-width: 1920px )
+				bottom: 8%
+			&:hover
+				transform: translate(0, 0) scale(1.2)
+
+
+.video-instruction
+	&__cont
+		display: grid
+		grid-template-columns: repeat(12, 1fr)
+		gap: 20px
+		align-items: flex-end
+		+until-tablet
+			grid-template-columns: 100%
+			gap: 0
+		&.play-video
+			.video-instruction__video
+				z-index: 1
+			.video-instruction__img
+				img
+					opacity: 0
+				&::after
+					opacity: 0
+				video
+					z-index: 1
+					opacity: 1
+	&__video
+		grid-column: span 8
+		border-radius: 20px
+		overflow: hidden
+		box-shadow: 0px 6px 10px rgba(20, 87, 101, 0.06)
+		position: relative
+		// background: $sky
+		transform: translate3d(0,0,-1px)
+		&:hover
+			z-index: 1
+	&__img
+		position: relative
+		padding-top: 51%
+		+until-tablet
+			padding-top: 65.5%
+		&:hover
+			&::after
+				opacity: 0
+			.video-instruction__btn
+				span
+					background-color: #fff
+					background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 15L7.5 27.9904L7.5 2.00962L30 15Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A")
+				&::before
+					background: #fff
+		img
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+			filter: blur(2px)
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: #0E2C42
+			opacity: .3
+			transition: opacity .3s
+		video
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+			opacity: 0
+	&__btn
+		appearance: none
+		padding: 0
+		position: absolute
+		z-index: 1
+		top: calc(50% - 35px)
+		left: calc(50% - 35px)
+		cursor: pointer
+		width: 100px
+		height: 100px
+		&.hide
+			opacity: 0
+			pointer-events: none
+		span
+			position: relative
+			display: block
+			z-index: 1
+			size: 70px
+			border-radius: 50%
+			// background-color: $white
+			background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 15L7.5 27.9904L7.5 2.00962L30 15Z' fill='%233AC5E7'/%3E%3C/svg%3E%0A")
+			background-repeat: no-repeat
+			background-position: center
+			transition: background-color .3s
+		&::before
+			content: ''
+			position: absolute
+			top: -5px
+			left: -5px
+			right: -5px
+			bottom: -5px
+			border-radius: 50%
+			background: #fff
+			opacity: .3
+			transition: background .3s
+	&__card
+		grid-column: span 4
+		margin-left: -80px
+		padding: 40px
+		border-radius: 20px
+		// background: $white
+		box-shadow: 0px 6px 10px rgba(20, 87, 101, 0.06)
+		font-size: 18px
+		line-height: 1.5
+		margin-bottom: 50px
+		position: relative
+		+until-tablet
+			padding: 30px 20px
+			margin-left: 20px
+			margin-right: 20px
+			margin-top: -30px
+			margin-bottom: 0
+	&__title
+		font-weight: 400
+		+until-tablet
+			font-size: 24px
+			&:not(:last-child)
+				margin-bottom: 20px
+
+
+.video-d
+	+until-tablet
+		display: none
+
+.video-m
+	display: none
+	+until-tablet
+		display: block

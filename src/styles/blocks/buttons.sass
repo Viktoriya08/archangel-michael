@@ -1,0 +1,191 @@
+.btn
+	color: var(--color-text)
+	text-decoration: none
+	cursor: pointer
+	display: block
+	font-size: rem(14)
+	line-height: 140%
+	font-weight: 500
+	letter-spacing: -0.02em
+	min-width: rem(120)
+	width: fit-content
+	padding: rem(11) rem(12)
+	text-align: center
+	text-transform: uppercase
+	background-color: var(--gold)
+	border: 1px solid var(--gold)
+	transition: .3s
+	&:hover:not(.btn--transparent)
+		background-color: var(--color-text)
+		border: 1px solid var(--color-text)
+		color: var(--color-white)
+
+	&:active:not(.btn--transparent)
+		background-color: var(--dark)
+		border-color: var(--dark)
+
+	&--transparent
+		background-color: transparent
+		&:hover
+			background-color: var(--gold)
+
+	&--white
+		color: var(--color-white)
+
+	&--clear
+		border-color: transparent
+		background-color: transparent
+
+	&.disabled
+		background-color: var(--border)
+		border: 1px solid var(--border)
+		color: var(--gray-dark)
+
+.btn-slider
+	display: block
+	width: rem(44)
+	height: rem(44)
+	border: 1px solid var(--gold)
+	background-image: url("data:image/svg+xml,%3Csvg width='10' height='18' viewBox='0 0 10 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L9 9L1 17' stroke='black'/%3E%3C/svg%3E%0A")
+	background-position: center
+	background-repeat: no-repeat
+	background-size: auto
+	transition: .3s
+	+until-tablet-xl
+		width: rem(34)
+		height: rem(34)
+	+until-tablet
+		width: rem(30)
+		height: rem(30)
+
+	&--prev
+		transform: rotate(180deg)
+
+	&--circle
+		border-radius: 50%
+		background-image: url("data:image/svg+xml,%3Csvg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8H19.7273M19.7273 8L12.7273 1M19.7273 8L12.7273 15' stroke='%23CFC5A0'/%3E%3C/svg%3E%0A")
+		width: rem(60)
+		height: rem(60)
+
+	&:hover
+		&:not(.btn-slider--circle):not(.swiper-button-disabled)
+			background-color: var(--gold)
+
+	&.swiper-button-disabled
+		cursor: auto
+		background-color: var(--border)
+		border-color: var(--border)
+		background-image: url("data:image/svg+xml,%3Csvg width='10' height='18' viewBox='0 0 10 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L9 9L1 17' stroke='%23B6B6B6'/%3E%3C/svg%3E%0A")
+
+.burger
+	position: relative
+	flex: 0 0 auto
+	width: rem(24)
+	height: rem(20)
+	color: var(--gold)
+	background-color: transparent
+	cursor: pointer
+	&::before
+		content: ""
+		position: absolute
+		left: 0
+		width: 100%
+		height: rem(2)
+		background-color: currentColor
+		border-radius: 2px
+		transition: transform 0.3s ease-in-out, top 0.3s ease-in-out
+	&::before
+		top: 0
+	span:not([class])
+		position: absolute
+		left: 0
+		top: 50%
+		width: 70%
+		height: rem(2)
+		background-color: var(--gold)
+		transform: translateY(-50%)
+		border-radius: 2px
+		transition: transform 0.3s ease-in-out
+	&.opened
+		&::before
+			top: 50%
+			transform: rotate(45deg)
+		span
+			transform: rotate(-45deg)
+			width: 100%
+
+
+.btn-blank
+	display: flex
+	font-size: rem(14)
+	font-weight: 500
+	line-height: 110%
+	text-transform: uppercase
+	text-decoration: none
+	transition: .3s
+	&::after
+		content: ' '
+		display: inline-block
+		width: rem(10)
+		height: rem(15)
+		margin-left: rem(8)
+		mask:
+			image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1H11M11 1V11M11 1L1 11' stroke='white'/%3E%3C/svg%3E")
+			repeat: no-repeat
+			position: right
+		background-color: var(--color-text)
+		transition: .3s
+	&:hover
+		.title-underline
+			&::after
+				width: 100%
+
+
+
+.btn-link
+	font-size: rem(14)
+	font-weight: 500
+	line-height: 140%
+	text-transform: uppercase
+	text-decoration: none
+	width: max-content
+	height: fit-content
+	display: flex
+	flex-direction: row-reverse
+	align-items: center
+	&::before
+		content: ' '
+		width: rem(40)
+		height: rem(15)
+		background-image: url("data:image/svg+xml,%3Csvg width='26' height='14' viewBox='0 0 26 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 7H25.2632M25.2632 7L19.2632 1M25.2632 7L19.2632 13' stroke='%23333333'/%3E%3C/svg%3E")
+		background-position: right
+		background-repeat: no-repeat
+		background-size: auto
+
+	&--revers
+		flex-direction: row
+
+		&::before
+			transform: rotate(180deg)
+
+		.btn-link__text
+			&::after
+				right: 0
+
+	&__text
+		position: relative
+		// +until-tablet
+		// 	width: min-content
+		&::after
+			content: ' '
+			background-color: var(--color-text)
+			display: block
+			position: absolute
+			bottom: rem(2)
+			width: 0
+			height: rem(1)
+			transition: width .3s
+	&:hover
+		.btn-link__text
+			&::after
+				width: 100%

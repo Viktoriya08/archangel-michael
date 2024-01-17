@@ -1,0 +1,65 @@
+.info
+
+	&__elem
+		font-weight: 500
+		padding: fluid(12, 24) 0
+		text-transform: uppercase
+		display: flex
+		//align-items: center
+		justify-content: space-between
+		border-top: 1px solid var(--border)
+
+		&:last-child
+			border-bottom: 1px solid var(--border)
+
+	&__name
+		color: var(--gray-dark)
+		font-size: rem(14)
+		margin-right: rem(10)
+
+	&__data
+		font-size: fluid(16, 20)
+		text-align: right
+
+		span
+			display: block
+			text-transform: initial
+			font-size: rem(14)
+			margin-top: rem(5)
+
+	&__list
+
+		+ .info__btn
+			margin-top: rem(24)
+
+		+ .info__list
+			margin-top: rem(15)
+
+		&--2
+			display: grid
+			grid-template-columns: repeat(2, 1fr)
+			column-gap: rem(20)
+			+until-tablet
+				grid-template-columns: 100%
+
+			.info__elem
+				&:nth-last-child(-n+2)
+					border-bottom: none
+
+		&--column
+			+until-tablet
+				.info__elem
+					flex-direction: column
+
+				.info__data
+					text-align: left
+					margin-top: rem(12)
+
+	&__btn
+		width: 100%
+
+	&__link
+		text-decoration: none
+		&:not(:last-child)
+			margin-right: rem(15)
+

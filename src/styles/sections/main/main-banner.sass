@@ -1,0 +1,352 @@
+.main-banner
+	background-color: $c-black
+	// min-height: rem(400)
+	color: var(--color-white)
+	// display: flex
+	+until-desktop
+		min-height: auto
+
+	&__progress
+		width: 100%
+		height: rem(4)
+		z-index: 2
+		position: absolute
+		left: 0
+		bottom: 0
+		span
+			display: block
+			height: 100%
+			width: 0
+			background-color: var(--gold)
+
+	.swiper-slide
+		height: auto
+		@media (min-width: 1950px)
+			min-height: 75vh
+		&-active
+			.main-banner__progress
+				span
+					animation: slide-progress 4s ease-in-out forwards
+
+			.main-banner__content > *
+				animation: fadeInUpSlide .7s ease-in-out
+
+			.main-banner__img
+				animation: fadeInUpSlideImg .5s ease
+
+	&__container
+		position: relative
+		display: grid
+		grid-template-columns: repeat(12, 1fr)
+		align-items: flex-end
+		height: 100%
+		width: 100%
+		box-sizing: border-box
+		max-width: none
+
+		+until-tablet
+			grid-template-columns: 100%
+			gap: rem(20)
+			//flex-direction: column-reverse
+			align-items: center
+
+
+	&__wrapper
+		height: 100%
+
+	&__slider
+		position: relative
+		height: 100%
+		cursor: none
+
+	&__slide
+		height: 100%
+
+	&__el
+		background-color: var(--dark)
+		padding-top: fluid(100, 160)
+		display: flex
+		align-items: flex-end
+		height: 100%
+		&--text-left
+			.main-banner__content
+				grid-column: 1/8
+				justify-content: flex-end
+				+until-tablet-xl
+					grid-column: 1/9
+				+until-tablet
+					grid-column: 1/-1
+					justify-content: flex-start
+
+		&--text-bigger
+			.main-banner__content
+				grid-column: 1/10
+				+until-tablet-xl
+					grid-column: 1/9
+				+until-tablet
+					grid-column: 1/-1
+			.title
+				font-size: rem(64)
+				+until-tablet-xl
+					font-size: rem(32)
+				+until-tablet
+					font-size: rem(24)
+
+		&--duel
+			.main-banner
+				&__content
+					grid-row: 1
+					+until-tablet
+						margin-bottom: 0
+						min-height: auto
+
+				&__name
+					color: var(--text-dark)
+					line-height: 94%
+					flex-grow: 0
+				&__bottom
+					flex-grow: 1
+
+		&:not(.main-banner__el--duel)
+			.main-banner
+				&__content
+					+until-tablet
+						> *:last-child
+							margin-bottom: 80px
+
+
+		+until-tablet
+			flex-direction: column-reverse
+			align-items: center
+
+	&__logo
+		position: absolute
+		right: rem(40)
+		bottom: rem(40)
+		max-width: fluid(220, 270)
+		max-height: fluid(250, 300)
+		+until-tablet
+			right: 50%
+			bottom: 50%
+			transform: translate(50%, 50%)
+			width: rem(220)
+		img
+			display: block
+			width: 100%
+			height: 100%
+
+	&__img
+		grid-column: 1/7
+		max-width: rem(770)
+		max-height: rem(640)
+		height: 100%
+		margin-right: rem(-120)
+		display: flex
+		align-items: flex-end
+		justify-content: flex-end
+		// @media screen and ( min-width: 1920px )
+		// 	max-width: none
+		// 	max-height: none
+		// 	width: 100%
+		margin-left: auto
+
+		+until-tablet
+			margin-right: 0
+			margin-top: rem(20)
+			margin-left: 0
+			width: 100%
+			height: 100%
+			grid-column: 1/-1
+			justify-content: center
+
+		img
+			display: inline-block
+			width: auto
+			margin: 0 auto
+			max-height: 100%
+			object-fit: contain
+			// @media screen and ( min-width: 1920px )
+			// 	width: 100%
+			// 	height: 100%
+			// 	object-fit: cover
+
+	&__name
+		max-width: rem(200)
+		font-weight: 500
+		font-size: fluid(16, 20)
+		text-transform: uppercase
+		margin-bottom: rem(40)
+		flex-grow: 1
+
+	&__code
+		color: var(--text-dark)
+		line-height: 94%
+		font-size: fluid(16, 20)
+		text-transform: uppercase
+		margin-bottom: fluid(20, 40)
+		+until-tablet-xl
+			margin-bottom: rem(20)
+
+	.title-duel
+		font-size: fluid(22, 54)
+		margin-bottom: rem(40)
+		hyphens: auto
+		+until-tablet-xl
+			margin-bottom: rem(17)
+
+		&--flex
+			.title-duel__el
+				&:first-child
+					&::after
+						font-size: fluid(14, 24)
+
+	.title-duel__el
+		flex-wrap: wrap
+
+	.title
+		+until-tablet
+			margin-bottom: rem(40)
+
+	&__img + .main-banner__content
+		height: auto
+		+until-tablet-xl
+			grid-column: 7/-1
+		+until-tablet
+			grid-column: 1/-1
+
+	&__content
+		grid-column: 7/-1
+		min-height: rem(550)
+		height: 93%
+		display: flex
+		flex-direction: column
+		margin-bottom: rem(40)
+		+until-tablet-xl
+			min-height: rem(420)
+			grid-column: 1/7
+		+until-tablet
+			width: 100%
+			grid-column: 1/-1
+			min-height: rem(350)
+			height: 100%
+			margin-bottom: 0
+			// > *:last-child
+			// 	margin-bottom: 80px
+
+		.rivals__img
+			width: rem(64)
+			height: rem(64)
+
+	&__bottom
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		+until-tablet
+			flex-wrap: wrap
+			justify-content: space-between
+
+	&__data
+		line-height: 94%
+		+until-tablet
+			margin-right: rem(10)
+
+		p:not([class])
+			font-weight: 500
+			text-transform: uppercase
+			font-size: fluid(16, 20)
+			margin-bottom: fluid(8, 12)
+			font-family: "robotocondensed", sans-serif
+
+		span:not([class])
+			text-transform: uppercase
+			font-size: fluid(14, 16)
+			color: var(--color-white)
+			font-family: "robotocondensed", sans-serif
+
+	&__btns
+		display: flex
+		flex-wrap: wrap
+		// +until-tablet
+		// 	margin-bottom: rem(80)
+
+	&__btn
+		margin-top: rem(40)
+		height: fit-content
+		&.btn--transparent
+			color: var(--color-white)
+		&:not(:last-child)
+			margin-right: rem(4)
+
+		+until-tablet-xl
+			margin-top: rem(24)
+
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		&::before
+			content: ' '
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: #00000033
+
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	.rivals
+		margin-bottom: rem(40)
+
+	.rivals__img
+		+until-tablet-xl
+			width: rem(34)
+			height: rem(34)
+
+	&__button
+		position: absolute
+		bottom: 0
+		&--prev
+			left: 0
+			right: auto
+		&--next
+			right: 0
+		+until-tablet-xl
+			bottom: rem(45)
+			width: rem(20)
+			height: rem(15)
+			background-image: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.0455 6H0.954563M0.954563 6L5.95456 1M0.954563 6L5.95456 11' stroke='%23CFC5A0'/%3E%3C/svg%3E")
+			background-repeat: no-repeat
+			background-position: center
+			background-size: auto
+			z-index: 1
+			&--prev
+				left: auto
+				right: rem(80)
+			&--next
+				right: rem(40)
+				transform: rotate(180deg)
+
+		+until-tablet
+			bottom: rem(30)
+			&--prev
+				left: 40%
+			&--next
+				right: 40%
+
+
+
+@keyframes slide-progress
+	0%
+		width: 0
+	100%
+		width: 100%
+
+
+

@@ -1,0 +1,162 @@
+.card
+	display: flex
+	flex-direction: column
+	position: relative
+	overflow: hidden
+	&:hover
+		.card__title
+			text-decoration: underline
+
+	&__link
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		z-index: 3
+
+	&__label
+		position: absolute
+		top: rem(12)
+		left: rem(12)
+		z-index: 4
+		+until-tablet
+			pointer-events: none
+
+		.label
+			&:not(:last-child)
+				margin-bottom: rem(5)
+
+	&__photo
+		position: relative
+		z-index: 2
+		background-image: url('../img/wings-gray.jpg')
+		background-position: center
+		background-repeat: no-repeat
+		background-size: 100% 100%
+		height: 100%
+		width: 100%
+		padding: rem(40) rem(5) 0
+
+	&__img
+		background: linear-gradient(180deg, #F6F6F6 0%, #E4E4E4 107.87%)
+		position: relative
+		overflow: hidden
+		margin-bottom: fluid(15, 25)
+		height: rem(400)
+		display: flex
+		align-items: flex-end
+		justify-content: center
+		+until-tablet
+			height: rem(400)
+
+		picture
+			height: 100%
+
+		img
+			margin: 0 auto
+			display: block
+			max-height: 100%
+			height: 100%
+			object-fit: cover
+
+		&::before
+			content: ' '
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: var(--gray)
+			z-index: 3
+
+		&::after
+			content: ' '
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: var(--gold)
+			z-index: 2
+
+	&__title
+		font-size: rem(24)
+		line-height: 110%
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: -0.02em
+		margin-bottom: fluid(15, 20)
+		transition: .3s
+		overflow: hidden
+		text-overflow: ellipsis
+
+	&__info
+		border-top: 1px solid var(--border)
+		padding-top: fluid(15, 25)
+		font-family: "roboto", sans-serif
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		font-size: fluid(12, 14)
+		line-height: 120%
+		font-weight: 500
+		letter-spacing: -0.02em
+		margin-bottom: fluid(10, 15)
+		+from-widescreen-xl
+			font-size: rem(18)
+
+	&__name
+		color: var(--gray-dark)
+
+	&__data
+		text-align: right
+
+
+.label
+	width: rem(36)
+	height: rem(36)
+	position: relative
+	cursor: pointer
+
+	img
+		width: 100%
+		height: 100%
+
+	&[data-winner]
+		&::before
+			content: attr(data-winner)
+			position: absolute
+			top: 50%
+			transform: translate(0, -50%) scaleX(0)
+			transform-origin: center left
+			opacity: 0
+			left: calc( 100% + 13px )
+			width: rem(150)
+			padding: rem(8)
+			font-size: fluid(12, 14)
+			font-weight: 500
+			color: var(--color-white)
+			background-color: var(--dark)
+			text-transform: uppercase
+			transition: .3s
+		&::after
+			content: ' '
+			position: absolute
+			width: 0
+			height: rem(11)
+			top: 50%
+			transform: translate(0, -50%)
+			left: calc( 100% + 8px )
+			background-image: url("data:image/svg+xml,%3Csvg width='6' height='11' viewBox='0 0 6 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5.5L5.5 0V11L0 5.5Z' fill='%23141414'/%3E%3C/svg%3E")
+			background-position: center
+			background-repeat: no-repeat
+			background-size: auto
+
+		&:hover
+			&::before
+				opacity: 1
+				transform: translate(0, -50%) scaleX(1)
+			&::after
+				width: rem(5)

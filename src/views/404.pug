@@ -1,0 +1,37 @@
+extends /base/_head
+block content
+	body.inner
+		.layout
+			//-HEADER
+			include /sections/_header
+			main.page
+
+				section.section
+
+					.section__container
+						.section-grid.section-grid--head
+
+							.section-grid__left
+								button(type="button").btn-link.btn-link--revers
+									.btn-link__text на главную
+
+							.section-grid__right
+								h1.title страница <br>не найдена
+
+						.section-grid
+							.section-grid__right.section-grid__right--wide
+								span На сайте нет страницы, которую вы искали
+
+								.error
+									.error__number 404
+									.error__text код <br>ошибки
+
+				//- актуальные новости
+				include /sections/error/_news-border
+
+			//-FOOTER
+			include /sections/_footer
+		//- POPUPS
+		include /popups/_all
+		//- SCRIPTS
+		include /base/_scripts

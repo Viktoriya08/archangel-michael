@@ -1,0 +1,56 @@
+.default-checkbox
+	position: relative
+	&__input
+		appearance: none
+		position: absolute
+		top: 0
+		left: 0
+		width: 0
+		height: 0
+		opacity: 0
+		&:checked
+			+ .default-checkbox__label
+				&::before
+					background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 7.99976L0 4.1536L1.12 3.07668L4 5.84591L10.08 -0.000244141L11.2 1.07668L4 7.99976Z' fill='#{$c-main}'/%3E%3C/svg%3E%0A")
+					background-repeat: no-repeat
+					background-position: center
+		&:disabled
+			+ .default-checkbox__label
+				cursor: not-allowed
+				filter: grayscale(100%)
+				opacity: .5
+				&::before
+					background-color: $c-black
+		&[required]
+			+ .default-checkbox__label
+				span
+					color: $c-error
+
+		&.error
+			+ .default-checkbox__label
+				color: $c-error
+				&::before
+					border-color: $c-error
+
+	&__label
+		position: relative
+		display: flex
+		align-items: center
+		cursor: pointer
+		+hover
+			&::before
+				border-color: $c-main
+		&::selection
+			background: transparent
+		&::before
+			content: ''
+			position: relative
+			display: block
+			width: em(20)
+			height: em(20)
+			border-radius: 4px
+			border: 1px solid $c-border
+			background-color: #fff
+			margin-right: em(16)
+			flex: none
+			transition: border-color .3s ease

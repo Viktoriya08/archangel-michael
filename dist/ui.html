@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>archangel-michael</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.ico">
+    <meta property="og:title" content="archangel-michael">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="./img/opengraph-image.jpg">
+    <meta property="og:site_name" content="">
+    <script type="module" crossorigin src="./scripts/vendor.js"></script>
+    <script type="module" crossorigin src="./scripts/index.js"></script>
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body class="inner">
+    <div class="layout">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__bg"><img src="img/footer-logo.svg" alt="alt" loading="lazy">
+          </div>
+          <div class="header__top">
+            <div class="burger"><span></span></div><a class="header__logo" href="#">
+              <div class="logo"><img src="img/logo.svg" alt="alt" loading="lazy">
+              </div>
+              <div class="logo logo--dark"><img src="img/logo-dark.svg" alt="alt" loading="lazy">
+              </div></a>
+            <div class="header__shop"><a class="btn-blank" href="#" target="_blank">
+                <div class="title-underline">RCC Shop</div></a></div>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a class="header__link" href="#">
+                  <div class="title-underline">Новости</div></a></li>
+              <li class="header__item"><a class="header__link" href="#">
+                  <div class="title-underline">Расписание боёв</div></a></li>
+              <li class="header__item"><a class="header__link" href="#">
+                  <div class="title-underline">Бойцы</div></a></li>
+              <li class="header__item"><a class="header__link" href="#">
+                  <div class="title-underline">Для прессы</div></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="page">
+        <div class="section">
+          <div class="section__container">
+            <h3>кнопки и ссылки</h3>
+            <ul class="example-list">
+              <li>
+                <button class="btn" tupe="button">трансляция</button>
+              </li>
+              <li>
+                <button class="btn btn--transparent" tupe="button">трансляция</button>
+              </li>
+              <li>
+                <button class="btn-slider btn-slider--prev" tupe="button"></button>
+              </li>
+              <li>
+                <button class="btn-slider" tupe="button"></button>
+              </li>
+              <li>
+                <button class="btn-slider swiper-button-disabled" tupe="button"></button>
+              </li>
+              <li>
+                <button class="btn-slider btn-slider--circle" tupe="button"></button>
+              </li>
+              <li><a class="btn-link" href="#">
+                  <div class="btn-link__text">все бойцы</div></a></li>
+              <li><a class="btn-link btn-link--revers" href="#">
+                  <div class="btn-link__text">НАЗАД</div></a></li>
+              <li><a class="btn-blank" href="#" target="_blank">
+                  <div class="title-underline">RCC Shop</div></a></li>
+            </ul><br>
+            <hr>
+            <h3>Табы</h3>
+            <ul class="tabs">
+              <li class="tabs__item">
+                <button class="tabs__btn active" type="button">mma</button>
+              </li>
+              <li class="tabs__item">
+                <button class="tabs__btn" type="button">бокс</button>
+              </li>
+              <li class="tabs__item">
+                <button class="tabs__btn" type="button">кикбоксинг</button>
+              </li>
+              <li class="tabs__item">
+                <button class="tabs__btn" type="button">тайский бокс</button>
+              </li>
+              <li class="tabs__item">
+                <button class="tabs__btn" type="button">кулачный бой</button>
+              </li>
+            </ul><br>
+            <hr>
+            <h3>Иконка загрузки</h3>
+            <div class="loader"></div>
+          </div>
+          <div class="example" style="max-width: 1200px; margin: 100px auto; background: #eee; padding: 30px; border-radius: 10px;">
+            <form class="form" action="">
+              <div class="form__title">Стандартные элементы форм</div>
+              <div class="form__inputs form__inputs--3">
+                <div class="default-input">
+                  <input class="default-input__input" type="text" required placeholder="Текст">
+                  <label class="default-input__label">Обязательное поле</label>
+                  <div class="default-input__error"></div>
+                </div>
+                <div class="default-input">
+                  <input class="default-input__input" type="text" placeholder="Текст" disabled>
+                  <label class="default-input__label">Заблокированное поле</label>
+                  <div class="default-input__error"></div>
+                </div>
+                <div class="default-input">
+                  <input class="default-input__input error" type="text">
+                  <label class="default-input__label">Ошибка заполнения</label>
+                  <div class="default-input__error">Заполните поле</div>
+                </div>
+              </div>
+              <div class="form__inputs form__inputs--3">
+                <div class="default-input">
+                  <input class="default-input__input" type="tel" placeholder="Текст" inputmode="numeric">
+                  <label class="default-input__label">Поле с маской телефона</label>
+                  <div class="default-input__error"></div>
+                </div>
+                <div class="default-input">
+                  <input class="default-input__input" type="text" placeholder="Текст" data-email>
+                  <label class="default-input__label">Поле с маской почты</label>
+                  <div class="default-input__error"></div>
+                </div>
+                <div class="default-input default-input--file">
+                  <input class="default-input__input" type="file" data-max-size="1">
+                  <div class="default-input__placeholder"><span>Загрузите файл</span></div>
+                  <label class="default-input__label">Input File</label>
+                  <div class="default-input__error"></div>
+                </div>
+              </div>
+              <div class="form__inputs form__inputs--3">
+                <div class="default-checkbox">
+                  <input class="default-checkbox__input" type="checkbox" id="checkbox-1" required>
+                  <label class="default-checkbox__label" for="checkbox-1">Обязательный чекбокс&nbsp;<span> *</span></label>
+                  <div class="default-input__error"></div>
+                </div>
+                <div class="default-checkbox">
+                  <input class="default-checkbox__input" type="checkbox" id="checkbox-2" disabled checked>
+                  <label class="default-checkbox__label" for="checkbox-2">Отключенный чекбокс</label>
+                  <div class="default-input__error"></div>
+                </div>
+                <div class="default-checkbox">
+                  <input class="default-checkbox__input error" type="checkbox" id="checkbox-3" required>
+                  <label class="default-checkbox__label" for="checkbox-3">Ошибка чекбокса</label>
+                  <div class="default-input__error">Заполните поле</div>
+                </div>
+                <div class="default-radio">
+                  <input class="default-radio__input" type="radio" id="radio-1" required name="radio">
+                  <label class="default-radio__label" for="radio-1">Обязательная радио кнопка&nbsp;<span> *</span></label>
+                  <div class="default-input__error"></div>
+                </div>
+                <div class="default-radio">
+                  <input class="default-radio__input" type="radio" id="radio-2" disabled name="radio" checked>
+                  <label class="default-radio__label" for="radio-2">Отключенная радио кнопка</label>
+                  <div class="default-input__error"></div>
+                </div>
+                <div class="default-radio">
+                  <input class="default-radio__input error" type="radio" id="radio-3" required name="radio">
+                  <label class="default-radio__label" for="radio-3">Ошибка радио кнопки</label>
+                  <div class="default-input__error">Заполните поле</div>
+                </div>
+                <div class="default-select">
+                  <select class="default-select__select">
+                    <option data-placeholder="true">бОЕЦ</option>
+                    <option value="0">пётр ян</option>
+                    <option value="1">элджемейн Стерлинг</option>
+                    <option value="2">иван штырков</option>
+                    <option value="3">антонио сильва</option>
+                    <option value="4">иван бандарчук</option>
+                    <option value="5">джастин гейджи</option>
+                  </select>
+                  <div class="default-select__label">Дефолтный селект</div>
+                </div>
+                <div class="default-select">
+                  <select class="default-select__select" multiple>
+                    <option value="0">Москва</option>
+                    <option value="1">Саратов</option>
+                    <option value="2">Пермь</option>
+                  </select>
+                  <div class="default-select__label">Мультивыбор</div>
+                </div>
+                <div class="default-select">
+                  <select class="default-select__select" data-search>
+                    <option value="0">Москва</option>
+                    <option value="1">Саратов</option>
+                    <option value="2">Пермь</option>
+                  </select>
+                  <div class="default-select__label">Селект с поиском</div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <style type="text/css">.example-list{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(100px,1fr))}a{text-decoration:none}</style>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__logo"><img src="img/footer-logo.svg" alt="alt" loading="lazy">
+          </div>
+          <div class="footer__top">
+            <nav class="footer__nav">
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <div class="title-underline">Новости</div></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <div class="title-underline">Расписание боёв</div></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <div class="title-underline">Бойцы</div></a></li>
+                <li class="footer__item"><a class="footer__link" href="#">
+                    <div class="title-underline">Для прессы</div></a></li>
+              </ul><a class="btn-blank" href="#" target="_blank" rel="noopener noreferrer">
+                <div class="title-underline">RCC Shop</div></a>
+            </nav>
+            <div class="footer__right">
+              <div class="footer__title">
+                <div class="footer__name"> архангел михаил</div>
+                <p>Цель клуба «Архангел Михаил» – популяризация здорового образа жизни и приобщение к спорту молодое население страны. Клуб даёт возможность молодым и заряженным на победы спортсменам реализовать себя с помощью спорта на профессиональном ринге.</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="social">
+              <div class="social__title">клуб в сети</div>
+              <ul class="social__list">
+                <li class="social__elem"><a class="social__link" href="#" target="_blank" rel="noopener noreferrer">vk</a></li>
+                <li class="social__elem"><a class="social__link" href="#" target="_blank" rel="noopener noreferrer">inst</a></li>
+                <li class="social__elem"><a class="social__link" href="#" target="_blank" rel="noopener noreferrer">tg</a></li>
+                <li class="social__elem"><a class="social__link" href="#" target="_blank" rel="noopener noreferrer">yt</a></li>
+              </ul>
+            </div>
+            <div class="footer__right">
+              <div class="partners">
+                <div class="partners__title title-short">генеральные партнёры</div>
+              </div>
+              <ul class="partners__list">
+                <li class="partners__elem"><a class="partners__link" href="#" target="_blank" rel="noopener noreferrer"><img src="img/rmk.svg" alt="alt" loading="lazy"></a></li>
+                <li class="partners__elem"><a class="partners__link" href="#" target="_blank" rel="noopener noreferrer"><img src="img/rmk-e.svg" alt="alt" loading="lazy"></a></li>
+                <li class="partners__elem"><a class="partners__link" href="#" target="_blank" rel="noopener noreferrer"><img src="img/rmk.svg" alt="alt" loading="lazy"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__sub">
+            <div class="footer__rights">АМ 2023 (c) Все права защищены</div>
+            <div class="footer__line">
+              <div class="footer__span">*Социальная сеть Инстаграм принадлежит Meta Platforms Inc., деятельность которой запрещена на территории РФ.</div>
+            </div><a class="copyright" href="#" target="_blank" rel="noopener noreferrer">Сделано в Xpage</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <div class="popup" id="card-popup">
+      <div class="popup__block">
+        <div class="popup__close"></div>
+        <div class="popup__title">титулы</div>
+        <div class="popup__content">
+          <ul class="card-popup__list">
+            <li class="card-popup__item">
+              <div class="card-popup__name">Чемпион ufc в легчайшем весе</div>
+              <div class="card-popup__icon"><img src="img/card/ufc.svg" alt="alt" loading="lazy">
+              </div>
+            </li>
+            <li class="card-popup__item">
+              <div class="card-popup__name">Чемпион ufc в легчайшем весе</div>
+              <div class="card-popup__icon"><img src="img/card/rcc.svg" alt="alt" loading="lazy">
+              </div>
+            </li>
+          </ul>
+          <div class="card-popup__btns"><a class="btn" href="#">подробнее о бойце</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="broadcast">
+      <div class="popup__block popup__block--bg">
+        <div class="popup__close"></div>
+        <div class="popup__title">трансляция <br> боя</div>
+        <div class="popup__content">
+          <div class="popup__text">
+            <p>Трансляция будет доступна на YouTube канале RCC Media</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nobis quam sequi repellat reiciendis quasi temporibus ipsum commodi veritatis! Sequi?</p>
+            <ul>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+            </ul>
+          </div>
+          <div class="popup__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores at earum perspiciatis nesciunt saepe magni, veniam nobis enim dolorum incidunt excepturi corporis voluptatibus! Totam perspiciatis modi atque iste praesentium soluta.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quam doloremque quas id temporibus adipisci.</p>
+          </div>
+          <div class="popup__btns"><a class="btn" href="#">перейти</a></div>
+        </div>
+        <div class="popup__content">
+          <div class="popup__text">
+            <p>Трансляция будет доступна на YouTube канале RCC Media</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nobis quam sequi repellat reiciendis quasi temporibus ipsum commodi veritatis! Sequi?</p>
+            <ul>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aliquam!</li>
+            </ul>
+          </div>
+          <div class="popup__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores at earum perspiciatis nesciunt saepe magni, veniam nobis enim dolorum incidunt excepturi corporis voluptatibus! Totam perspiciatis modi atque iste praesentium soluta.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quam doloremque quas id temporibus adipisci.</p>
+          </div>
+          <div class="popup__btns"><a class="btn" href="#">перейти</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="broadcast-2">
+      <div class="popup__block popup__block--bg">
+        <div class="popup__close"></div>
+        <div class="popup__title">трансляция <br> боя</div>
+        <div class="popup__content">
+          <div class="popup__text">
+            <p>Трансляция будет доступна на телеканале МатчТВ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

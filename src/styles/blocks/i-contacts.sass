@@ -1,0 +1,47 @@
+.i-contacts
+
+	+until-tablet-xl
+		display: flex
+		flex-wrap: wrap
+
+	&__el
+		&:not(:last-child)
+			margin-bottom: rem(12)
+
+		&.social
+			margin-top: rem(40)
+		+until-tablet-xl
+			width: 50%
+
+			&:first-child
+				order: -2
+			&.social
+				order: -1
+				margin-top: 0
+
+		+until-tablet
+			width: 100%
+
+			&:first-child
+				order: 0
+			&.social
+				order: 0
+				margin-top: rem(24)
+
+	&__phone
+		display: block
+		text-decoration: none
+		font-size: rem(44)
+		font-weight: 500
+		width: fit-content
+		+until-tablet-xl
+			font-size: rem(32)
+
+	&__mail
+		display: block
+		text-decoration: none
+		font-size: rem(16)
+		font-weight: 500
+		width: fit-content
+		+until-tablet-xl
+			font-size: rem(14)

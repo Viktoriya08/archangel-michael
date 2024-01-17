@@ -1,0 +1,160 @@
+extends /base/_head
+block content
+	body.inner
+		.layout
+			include /sections/_header
+			main.page
+
+				.section
+					.section__container
+
+						h3 кнопки и ссылки
+						ul.example-list
+							li
+								button(tupe="button").btn трансляция
+
+							li
+								button(tupe="button").btn.btn--transparent трансляция
+
+							li
+								button(tupe="button").btn-slider.btn-slider--prev
+
+							li
+								button(tupe="button").btn-slider
+
+							li
+								button(tupe="button").btn-slider.swiper-button-disabled
+
+							li
+								button(tupe="button").btn-slider.btn-slider--circle
+
+							li
+								a(href="#").btn-link
+									.btn-link__text все бойцы
+
+							li
+								a(href="#").btn-link.btn-link--revers
+									.btn-link__text НАЗАД
+
+							li
+								a.btn-blank(href="#" target="_blank")
+									.title-underline RCC Shop
+
+						br
+						hr
+						h3 Табы
+						ul.tabs
+							li.tabs__item
+								button(type="button").tabs__btn.active mma
+							li.tabs__item
+								button(type="button").tabs__btn бокс
+							li.tabs__item
+								button(type="button").tabs__btn кикбоксинг
+							li.tabs__item
+								button(type="button").tabs__btn тайский бокс
+							li.tabs__item
+								button(type="button").tabs__btn кулачный бой
+
+						br
+						hr
+						h3 Иконка загрузки
+						.loader
+
+					.example(style="max-width: 1200px; margin: 100px auto; background: #eee; padding: 30px; border-radius: 10px;")
+						form.form(action="")
+							.form__title Стандартные элементы форм
+							.form__inputs.form__inputs--3
+								.default-input
+									input(type="text" required placeholder="Текст").default-input__input
+									label.default-input__label Обязательное поле
+									.default-input__error
+								.default-input
+									input(type="text" placeholder="Текст" disabled).default-input__input
+									label.default-input__label Заблокированное поле
+									.default-input__error
+								.default-input
+									input(type="text").default-input__input.error
+									label.default-input__label Ошибка заполнения
+									.default-input__error Заполните поле
+								//- Для работы масок раскомментируй плагин в файле src/scripts/index.js
+							.form__inputs.form__inputs--3
+								.default-input
+									input(type="tel" placeholder="Текст" inputmode="numeric").default-input__input
+									label.default-input__label Поле с маской телефона
+									.default-input__error
+								.default-input
+									input(type="text" placeholder="Текст" data-email).default-input__input
+									label.default-input__label Поле с маской почты
+									.default-input__error
+								//- Для работы Input File раскомментируй в файле src/scripts/index.js
+								.default-input.default-input--file
+									input(type="file" data-max-size="1").default-input__input
+									.default-input__placeholder #[span Загрузите файл]
+									label.default-input__label Input File
+									.default-input__error
+							.form__inputs.form__inputs--3
+								.default-checkbox
+									input(type="checkbox" id="checkbox-1" required).default-checkbox__input
+									label(for="checkbox-1").default-checkbox__label Обязательный чекбокс&nbsp;
+										span  *
+									.default-input__error
+								.default-checkbox
+									input(type="checkbox" id="checkbox-2" disabled checked).default-checkbox__input
+									label(for="checkbox-2").default-checkbox__label Отключенный чекбокс
+									.default-input__error
+								.default-checkbox
+									input(type="checkbox" id="checkbox-3" required).default-checkbox__input.error
+									label(for="checkbox-3").default-checkbox__label Ошибка чекбокса
+									.default-input__error Заполните поле
+								.default-radio
+									input(type="radio" id="radio-1" required name="radio").default-radio__input
+									label(for="radio-1").default-radio__label Обязательная радио кнопка&nbsp;
+										span  *
+									.default-input__error
+								.default-radio
+									input(type="radio" id="radio-2" disabled name="radio" checked).default-radio__input
+									label(for="radio-2").default-radio__label Отключенная радио кнопка
+									.default-input__error
+								.default-radio
+									input(type="radio" id="radio-3" required name="radio").default-radio__input.error
+									label(for="radio-3").default-radio__label Ошибка радио кнопки
+									.default-input__error Заполните поле
+
+								//- Для работы селектов раскомментируй плагин в файле src/scripts/index.js и стили src/styles/libs/_all.sass
+								.default-select
+									select.default-select__select
+										option(data-placeholder="true") бОЕЦ
+										option(value="0") пётр ян
+										option(value="1") элджемейн Стерлинг
+										option(value="2") иван штырков
+										option(value="3") антонио сильва
+										option(value="4") иван бандарчук
+										option(value="5") джастин гейджи
+									.default-select__label Дефолтный селект
+								.default-select
+									select.default-select__select(multiple)
+										option(value="0") Москва
+										option(value="1") Саратов
+										option(value="2") Пермь
+									.default-select__label Мультивыбор
+								.default-select
+									select.default-select__select(data-search)
+										option(value="0") Москва
+										option(value="1") Саратов
+										option(value="2") Пермь
+									.default-select__label Селект с поиском
+
+
+				style(type="text/css").
+					.example-list {
+						display: grid;
+						grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+						gap: 20px;
+					}
+					a{
+						text-decoration: none;
+					}
+
+			include /sections/_footer
+		include /base/_scripts
+		include /popups/_all

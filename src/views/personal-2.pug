@@ -1,0 +1,26 @@
+extends /base/_head
+block content
+	body.inner
+		.layout
+			//-HEADER
+			include /sections/_header
+			main.page.js-paralax
+				//- Баннер
+				include /sections/personal/_banner-no-awards
+
+				include /sections/personal/_personal-info
+
+				include /sections/personal/_personal-news
+
+				include /sections/personal/_personal-duel
+
+				include /sections/personal/_story
+
+				include /sections/personal/_personal-next
+
+			//-FOOTER
+			include /sections/_footer
+		//- POPUPS
+		include /popups/_all
+		//- SCRIPTS
+		include /base/_scripts

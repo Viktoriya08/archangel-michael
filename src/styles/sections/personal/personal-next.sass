@@ -1,0 +1,131 @@
+.personal-next
+	&__box
+		display: grid
+		grid-template-columns: 50% 50%
+		position: relative
+		cursor: none
+
+	&__card
+		position: relative
+		display: grid
+		grid-template-columns: 100%
+		align-items: flex-end
+		height: 100%
+		justify-content: space-between
+		padding: rem(24) rem(24) 0
+		background-color: var(--color-white)
+		transition: 1s
+		+until-tablet
+			flex-direction: column-reverse
+			padding: 0
+			align-items: center
+
+		&:nth-child(1)
+			.personal-next__img
+				margin-left: auto
+				img
+					margin-left: auto
+
+			.personal-next__content
+				+until-tablet
+					flex-direction: row
+					justify-content: flex-start
+
+		&:nth-child(2)
+			flex-direction: row
+			text-align: right
+
+			.personal-next__content
+				align-items: flex-end
+				+until-tablet
+					flex-direction: row-reverse
+					justify-content: flex-start
+					align-items: flex-start
+
+			+until-tablet
+				flex-direction: column-reverse
+
+
+		&:hover
+			background-color: var(--gray)
+
+	&__link
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		cursor: none
+		z-index: 1
+
+	&__content
+		display: flex
+		flex-direction: column
+		height: 100%
+		justify-content: space-between
+		grid-row: 1
+		grid-column: 1/-1
+		+until-tablet
+			gap: rem(12)
+
+	&__top
+		width: min-content
+		font-weight: 500
+		text-transform: uppercase
+		font-size: fluid(10, 20)
+		margin-bottom: rem(15)
+		+until-tablet
+			margin-bottom: 0
+
+	&__mini
+		display: none
+		width: rem(34)
+		height: rem(34)
+		border-radius: 50%
+		overflow: hidden
+
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: contain
+			background-color: #f6f6f6
+
+		+until-tablet
+			display: block
+
+	&__img
+		height: rem(300)
+		grid-row: 1
+		grid-column: 1/-1
+		position: relative
+		+until-tablet-xl
+			max-width: 67%
+			height: 85%
+		+until-tablet
+			display: none
+
+		img
+			display: block
+			height: 100%
+
+	.title-short
+		margin-bottom: fluid(10, 24)
+		font-size: rem(28)
+		+until-tablet-xl
+			font-size: rem(24)
+
+	&__name
+		padding-bottom: rem(24)
+		p:not([class])
+			font-weight: 500
+			font-size: rem(14)
+			color: var(--gray-dark)
+		+until-tablet
+			display: none
+
+	&__nobody
+		cursor: auto
+
+
+

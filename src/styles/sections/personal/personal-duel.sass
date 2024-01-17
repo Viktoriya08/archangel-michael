@@ -1,0 +1,42 @@
+.personal-duel
+
+	.section__container
+		display: grid
+		grid-template-columns: repeat(12, 1fr)
+
+	&__short
+		grid-column: 1/3
+		+until-tablet-xl
+			display: none
+
+	&__title
+		grid-column: 4/11
+		+until-tablet-xl
+			grid-column: 1/10
+
+	&__info
+		margin-top: 0 !important
+
+	.section-grid
+		grid-column: 1/-1
+
+	.btn-link
+		grid-column: 11/-1
+		+until-tablet
+			grid-column: 1/-1
+			order: 1
+			margin-top: rem(24)
+
+
+	.btn-link__text
+		+until-tablet
+			width: min-content
+
+	.info__elem
+		+until-tablet
+			flex-direction: column
+
+	.info__data
+		+until-tablet
+			text-align: left
+			margin-top: rem(12)

@@ -1,0 +1,60 @@
+section.section
+	.section__container
+		.section-grid.section-grid--head
+
+			.section-grid__left
+				+breadcrumbs(['новости'])
+
+			.section-grid__right
+				h1.title новости
+
+		.big-slider(data-custom-cursor=".custom-cursor")
+			.swiper.big-slider-js
+				.swiper-wrapper
+					.swiper-slide
+						.big-slider__slide
+							.big-slider__img
+								+image('img/news/news-1.jpg', 'alt')
+								picture
+									source(srcset="img/news/news-1_mob.jpg" media="(max-width: 992px)")
+									img(src="img/news/news-1.jpg" alt="" loading="")
+							.big-slider__content
+								.big-slider__top
+									.tags
+										.tags__tag бои
+										.tags__data 3 мая 2023
+
+								.big-slider__title.title-duel Осталось всего ДВА дня до RCC 15
+								.big-slider__text 13 мая в Екатеринбурге пройдет 15-й номерной турнир RCC, где соберутся звезды мирового ММА и кикбоксинга.
+								.big-slider__btns(data-default-cursor)
+									a(href="#").btn.btn--transparent.btn--white подробнее
+
+					.swiper-slide
+						.big-slider__slide
+							.big-slider__img
+								+image('img/news/news-2.jpg', 'alt')
+							.big-slider__content
+								.big-slider__top
+									.tags
+										.tags__tag бои
+
+								.big-slider__title.title-duel Осталось всего ДВА дня до RCC 15
+								.big-slider__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nobis numquam recusandae eligendi ea repellendus illum veritatis quia eaque odit dignissimos quae tempora voluptatum quasi blanditiis fugiat nulla vel consequuntur, rem voluptate, quo id. Commodi quos laborum eum, odit perspiciatis alias tempora quidem delectus dignissimos veniam sit aspernatur voluptas architecto?
+								.big-slider__btns(data-default-cursor)
+									a(href="#").btn.btn--transparent.btn--white подробнее
+
+					.swiper-slide
+						.big-slider__slide
+							.big-slider__img
+								+image('img/news/news-3.jpg', 'alt')
+							.big-slider__content
+								.big-slider__top
+
+								.big-slider__title.title-duel Lorem, ipsum dolor.
+								.big-slider__text 13 мая в Екатеринбурге пройдет 15-й номерной турнир RCC, где соберутся звезды мирового ММА и кикбоксинга.
+								.big-slider__btns(data-default-cursor)
+									a(href="#").btn.btn--transparent.btn--white подробнее
+									a(href="#").btn.btn--transparent.btn--white еще кнопка
+
+			.custom-cursor.btn-slider.btn-slider--circle
+

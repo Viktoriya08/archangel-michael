@@ -1,0 +1,86 @@
+.ring
+	background-color: var(--gray)
+	padding-top: rem(80)
+	padding-bottom: fluid(40, 80)
+	+until-tablet
+		padding-top: rem(40)
+
+	&.section
+		margin-top: rem(0)
+
+	&--white
+		background-color: var(--color-white)
+		padding: 0
+		.battle
+			background-color: var(--gray)
+
+		> .ring__search
+			&:first-child
+				margin-top: rem(-20)
+				+until-tablet
+					margin-top: 0
+	.tabs
+		+until-tablet
+			padding: 0 rem(15)
+			margin-right: rem(-15)
+			margin-left: rem(-15)
+
+	&__box
+		margin-top: fluid(20, 40)
+
+	.head-section__short
+		+until-tablet-xl
+			display: block
+			.title-short
+				font-size: rem(24)
+
+	.head-section__title
+		+until-tablet-xl
+			display: none
+
+	&__title
+		font-size: fluid(22, 32)
+		font-weight: 500
+		text-transform: uppercase
+		margin-bottom: fluid(20, 40)
+
+	&__day
+		font-size: rem(16)
+		line-height: 140%
+		font-weight: 500
+		text-transform: uppercase
+		margin-bottom: fluid(15, 20)
+		display: flex
+		align-items: center
+		&::before
+			content: ' '
+			display: block
+			width: rem(20)
+			height: rem(20)
+			background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.2 2.00012L5.2 3.60012H3H2V4.60012V7.40012V8.40012V17.0001V18.0001H3H17H18V17.0001V8.40012V7.40012V4.60012V3.60012H17H15V2.00012H14V3.60012H6.2V2.00012H5.2ZM17 7.40012V4.60012H3V7.40012H17ZM3 8.40012V17.0001H17V8.40012H3Z' fill='%23737373'/%3E%3C/svg%3E")
+			background-position: center
+			background-repeat: no-repeat
+			background-size: auto
+			margin-right: rem(8)
+			margin-bottom: rem(3)
+		+until-tablet
+			font-size: rem(14)
+
+	&__battles
+		&:not(:last-child)
+			margin-bottom: fluid(30, 40)
+
+	.battle
+		&:not(:last-child)
+			margin-bottom: rem(12)
+
+	&__search
+		font-weight: 500
+		text-transform: uppercase
+		color: var(--gray-dark)
+		font-size: rem(14)
+
+
+
+
+

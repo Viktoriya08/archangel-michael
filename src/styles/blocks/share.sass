@@ -1,0 +1,72 @@
+.share
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		padding: rem(20) 0
+		border-top: 1px solid var(--border)
+		border-bottom: 1px solid var(--border)
+		gap: rem(10)
+		+until-tablet
+			padding: rem(10) 0
+			gap: 0
+
+	&__elem
+		text-transform: uppercase
+		font-weight: 500
+		font-size: rem(14)
+		&:not(:last-child)
+			margin-right: rem(24)
+
+		&:nth-last-child(2)
+			flex-grow: 1
+
+		&:last-child
+			text-align: right
+
+		+until-tablet
+			width: 50%
+			&:not(:last-child)
+				margin-right: 0
+				margin-bottom: rem(15)
+
+			&:last-child
+				margin-top: rem(24)
+				text-align: left
+
+
+	&__link
+		text-decoration: none
+
+	&__input
+		width: 1px
+		opacity: 0
+
+	&__text
+		cursor: pointer
+		text-transform: uppercase
+		font-weight: 500
+		font-size: rem(14)
+
+	&__result
+		position: fixed
+		z-index: 2
+		left: rem(20)
+		bottom: rem(20)
+		background-color: var(--dark)
+		text-transform: uppercase
+		font-size: rem(14)
+		font-weight: 500
+		color: var(--color-white)
+		padding: rem(17)
+		padding-left: rem(44)
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_103_3468)'%3E%3Ccircle cx='12' cy='12' r='11' stroke='white' stroke-width='2'/%3E%3Cpath d='M7.33398 12L10.6673 15.3333L17.334 8.66663' stroke='white' stroke-width='2'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_103_3468'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+		background-position: rem(12) 50%
+		background-repeat: no-repeat
+		background-size: auto
+		transition: .3s
+		&.hidden
+			opacity: 0
+		&.fadeInUp
+			opacity: 1

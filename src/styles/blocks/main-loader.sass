@@ -1,0 +1,110 @@
+.main-loader
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100vh
+	background-color: var(--color-black)
+	overflow: hidden
+	z-index: 101
+
+	&__count
+		color: var(--color-white)
+		position: absolute
+		right: rem(20)
+		bottom: rem(10)
+		font-size: rem(62)
+		font-weight: 700
+		display: flex
+		justify-content: flex-end
+		width: rem(105)
+		height: rem(75)
+		opacity: 0
+		+until-tablet
+			font-size: rem(42)
+			height: rem(40)
+			bottom: rem(150)
+
+
+	&__number
+		display: flex
+		flex-direction: column
+		width: rem(35)
+		height: rem(75)
+		overflow: hidden
+		+until-tablet
+			height: rem(40)
+			width: rem(25)
+
+	#number-10
+		transition: 2s
+		animation: countTime-10 .8s
+		animation-timing-function: ease
+
+	#number-90
+		transition: 4s
+		animation: countTime-90 1s
+		animation-timing-function: ease-in-out
+
+	#number-100
+		transform: translate3d(0,50%,0)
+		transition: .1s
+		animation: countTime-100 .5s forwards
+		animation-timing-function: ease
+		animation-delay: .8s
+
+	&__wrapper
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+
+	&__box
+		display: flex
+		align-items: center
+		//width: rem(300)
+		//overflow: hidden
+		opacity: 0
+		+until-tablet
+			//width: rem(150)
+
+	&__bg
+		position: absolute
+		z-index: 1
+		left: 0
+		bottom: -100%
+		width: 100%
+		height: 80vh
+		background-color: var(--gold)
+
+	&__logo
+		width: rem(200)
+		height: rem(200)
+		// background-color: var(--color-black)
+		flex: none
+		position: relative
+		z-index: 1
+		+until-tablet
+			width: rem(100)
+			height: rem(100)
+		svg
+			width: 100%
+			height: 100%
+
+	&__name
+		color: var(--gold)
+		font-weight: 700
+		font-size: rem(62)
+		line-height: 90%
+		text-transform: uppercase
+		width: min-content
+		+until-tablet
+			font-size: rem(32)
+
+	&__wr
+		position: absolute
+		overflow: hidden
+		width: 0
+
+
+

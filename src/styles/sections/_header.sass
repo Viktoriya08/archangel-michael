@@ -1,0 +1,200 @@
+.header-white
+	.header
+		color: var(--color-white)
+	.btn-blank
+		&::after
+			background-color: var(--color-white)
+		// &:hover
+		// 	&::after
+		// 		background-color: var(--gold)
+
+.header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	color: var(--color-text)
+	padding: rem(24) 0
+	font-weight: 500
+	line-height: 110%
+	transition: .3s
+	transition: width 0s
+	z-index: 2
+	+until-tablet-xl
+		padding: rem(15) 0
+
+	&.header-scroll:not(.opened)
+		position: fixed
+		z-index: 100
+		background-color: var(--color-white)
+		color: inherit
+		padding: 0
+
+		.header__nav, .header__shop
+			padding: rem(30) 0
+
+		+until-tablet-xl
+			.header__nav
+				padding: 0
+			.header__shop
+				padding: rem(15) 0
+			.burger
+				margin-top: rem(20)
+
+
+		.header
+			&__list
+				display: flex
+				flex-wrap: wrap
+				row-gap: rem(10)
+				flex-direction: row
+			&__item
+				&:not(:last-child)
+					margin-right: rem(40)
+			&__link
+				padding-bottom: rem(0)
+			&__logo
+				background-color: var(--gold)
+				top: 0
+				.logo
+					display: none
+					&--dark
+						display: block
+		.btn-blank
+			&::after
+				background-color: var(--color-text)
+			// &:hover
+			// 	&::after
+			// 		background-color: var(--gold)
+
+	+until-tablet-xl
+		transition: .3s
+		.header__bg
+			img
+				height: 0
+
+		&.opened
+			color: var(--color-white)
+			height: 100vh
+			background-color: var(--color-text)
+			//background-image: url(../img/header-bg.jpg)
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: 53% 50%
+			z-index: 100
+
+			.header__container
+				height: 100%
+
+			.header__nav
+				height: calc(100% - 65px)
+				padding-top: rem(80)
+				opacity: 1
+				transform: scaleY(1)
+				transition: all .3s ease-in-out
+
+			.header__bg
+				display: flex
+				opacity: 1
+				height: 100%
+				transition: opacity 2.5s ease-in-out
+				img
+					height: auto
+
+			.btn-blank::after
+				background-color: var(--color-white)
+
+	&__top
+		order: 1
+		display: grid
+		grid-template-columns: 1fr auto
+		+until-tablet-xl
+			grid-template-columns: 1fr 1fr auto
+
+
+	&__shop
+		margin-left: auto
+		+until-tablet-xl
+			margin-top: rem(10)
+
+	&__bg
+		display: none
+		background-color: var(--dark)
+		align-items: center
+		justify-content: center
+		z-index: -1
+
+		picture
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 100%
+
+		+until-tablet-xl
+			display: block
+			position: absolute
+			width: 100%
+			top: 0
+			left: 0
+			height: 0
+			opacity: 0
+
+	.burger
+		display: none
+		+until-tablet-xl
+			display: block
+			margin-top: rem(10)
+
+	&__container
+		display: grid
+		grid-template-columns: 47% 1fr
+		+until-tablet-xl
+			height: auto
+			display: block
+
+	&__nav
+		display: flex
+		justify-content: space-between
+		+until-tablet-xl
+			height: 0
+			justify-content: space-between
+			flex-direction: column
+			opacity: 0
+			transform: scaleY(0)
+
+	&__logo
+		width: rem(80)
+		height: rem(80)
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: transparent
+		img
+			width: rem(58)
+			height: rem(65)
+		+until-tablet-xl
+			width: rem(55)
+			height: rem(60)
+			// position: static
+			// transform: translateX(0%)
+			img
+				width: rem(50)
+				height: rem(55)
+
+
+		.logo--dark
+			display: none
+
+	&__link
+		font-size: rem(14)
+		text-transform: uppercase
+		text-decoration: none
+		display: block
+		padding-bottom: rem(12)
+		width: fit-content
+		transition: .3s
+
+.popup-opened
+	.header.header-scroll
+		z-index: 0
+

@@ -1,0 +1,60 @@
+.section-grid.section-grid--border.dropdown.dropdown--onli-mobile(data-dropdown)
+	.section-grid__left.dropdown__head
+		.section__subtitle параметры поиска
+
+	.section-grid__right.dropdown__content
+
+		form.form(action="#")
+
+			.form__inputs.form__inputs--2
+				.default-select
+					select.default-select__select
+						option(data-placeholder="true") БОЕЦ
+						option(value="0" style="--url-img: url('../img/banner/rivals-1.jpg')").icon пётр ян
+						option(value="1" style="--url-img: url('../img/banner/rivals-2.png')").icon элджемейн Стерлинг
+						option(value="2" style="--url-img: url('../img/banner/rivals-3.jpg')").icon иван штырков
+						option(value="3" style="--url-img: url('../img/banner/rivals-1.jpg')").icon антонио сильва
+						option(value="4" style="--url-img: url('../img/banner/rivals-1.jpg')").icon иван бандарчук
+						option(value="5" style="--url-img: url('../img/banner/rivals-1.jpg')").icon джастин гейджи
+						option(value="6" style="--url-img: url('../img/banner/rivals-1.jpg')").icon антонио сильва
+						option(value="7" style="--url-img: url('../img/banner/rivals-1.jpg')").icon иван бандарчук
+						option(value="8").icon джастин гейджи
+
+				.default-select
+					select.default-select__select
+						option(data-placeholder="true") ТУРНИР
+						option(value="t-0") ТУРНИР 1
+						option(value="t-1") ТУРНИР 2
+						option(value="t-3") ТУРНИР 3
+						option(value="t-0") ТУРНИР 1
+						option(value="t-1") ТУРНИР 2
+						option(value="t-3") ТУРНИР 3
+						option(value="t-0") ТУРНИР 1
+						option(value="t-1") ТУРНИР 2
+						option(value="t-3") ТУРНИР 3
+						option(value="t-0") ТУРНИР 1
+						option(value="t-1") ТУРНИР 2
+						option(value="t-3") ТУРНИР 3
+
+			.form__inputs.form__inputs--2
+				.default-select
+					select.default-select__select
+						option(data-placeholder="true") ДИСЦИПЛИНА
+						option(value="d-0") ДИСЦИПЛИНА 1
+						option(value="d-1") ДИСЦИПЛИНА 2
+						option(value="d-3") ДИСЦИПЛИНА 3
+						option(value="d-0") ДИСЦИПЛИНА 1
+						option(value="d-1") ДИСЦИПЛИНА 2
+						option(value="d-3") ДИСЦИПЛИНА 3
+						option(value="d-0") ДИСЦИПЛИНА 1
+						option(value="d-1") ДИСЦИПЛИНА 2
+						option(value="d-3") ДИСЦИПЛИНА 3
+
+				.default-datapicker
+					input.default-datapicker__input(type="text" placeholder="ПЕРИОД" readonly)
+					.default-datapicker__box
+
+			.form__submit
+				button(type="submit").btn ПРИМЕНИТЬ
+				button(type="").btn.btn--clear СБРОСИТЬ ПАРАМЕТРЫ
+

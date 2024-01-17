@@ -1,0 +1,170 @@
+section.ring.section(data-paralax="2")
+	.ring__container
+
+		.head-section.fadeInUp
+			.head-section__short
+				h3.title-short ближайшие бои
+
+			.head-section__title
+				h2.title расписание боёв <br>на текущий месяц
+
+			a(href="#").btn-link.head-section__link
+				.btn-link__text все бои
+
+		.section-grid
+			.section-grid__right
+				nav.tabs-nav
+					ul.tabs
+						li.tabs__item
+							button(type="button").tabs__btn.active mma
+						li.tabs__item
+							button(type="button").tabs__btn бокс
+						li.tabs__item
+							button(type="button").tabs__btn кикбоксинг
+						li.tabs__item
+							button(type="button").tabs__btn тайский бокс
+						li.tabs__item
+							button(type="button").tabs__btn кулачный бой
+
+		.ring__box
+
+			.ring__battles
+				.ring__day
+					time(datatime="2023-05-06")
+					| 6 мая, суббота
+
+				.battle.cardRotate
+					.battle__time
+						time(datatime="18:00") 18:00 по мск
+					.battle__elem
+						.battle__name
+							.battle__fighter пётр ян
+							span легчайший вес /
+								span 16-5-0
+						.rivals
+							.battle__photo.rivals__img
+								+image('img/banner/rivals-1.jpg', 'alt')
+
+					.battle__vs VS
+
+					.battle__elem.battle__elem--left
+						.battle__name
+							.battle__fighter элджемейн Стерлинг
+							span легчайший вес /
+								span 22-3-0
+						.rivals
+							.battle__photo.rivals__img
+								+image('img/banner/rivals-2.png', 'alt')
+
+					.battle__btn
+						button(type="button").btn трансляция
+
+				.battle.cardRotate
+					.battle__time
+						time(datatime="19:30") 19:30 по мск
+					.battle__elem
+						.battle__name
+							.battle__fighter иван штырков
+							span тяжелый вес /
+								span 22-2-1
+						.rivals
+							.battle__photo.rivals__img
+								+image('img/banner/rivals-3.jpg', 'alt')
+
+					.battle__vs VS
+
+					.battle__elem.battle__elem--left
+						.battle__name
+							.battle__fighter антонио сильва
+							span тяжелый вес /
+								span 19-14-1
+						.rivals
+							.battle__photo.rivals__img
+								+image('img/banner/rivals-4.png', 'alt')
+
+					.battle__btn
+						button(type="button").btn.btn--transparent где смотреть?
+
+			.ring__battles
+				.ring__day
+					time(datatime="2023-05-06") 7 мая, воскресенье
+
+				.battle.cardRotate
+					.battle__time
+						time(datatime="18:00") 18:00 по мск
+					.battle__elem
+						.battle__name
+							.battle__fighter иван бандарчук
+							span легкий вес /
+								span 15-3-1
+						.rivals
+							.battle__photo.rivals__img
+								+image('img/banner/rivals-5.jpg', 'alt')
+
+					.battle__vs VS
+
+					.battle__elem.battle__elem--left
+						.battle__name
+							.battle__fighter элджемейн Стерлинг
+							span легчайший вес /
+								span 22-3-0
+						.rivals
+							.battle__photo.rivals__img
+								+image('img/banner/rivals-6.jpg', 'alt')
+
+					.battle__btn
+						button(type="button").btn трансляция
+
+				.battle.cardRotate
+					.battle__time
+						time(datatime="19:30") 19:30 по мск
+					.battle__elem
+						.battle__name
+							.battle__fighter артур караваев
+							span средний вес /
+								span 17-8-0
+						.rivals
+							.battle__photo.rivals__img
+								+image('img/banner/rivals-7.jpg', 'alt')
+
+					.battle__vs VS
+
+					.battle__elem.battle__elem--left
+						.battle__name
+							.battle__fighter хамзат чимаев
+							span средний вес /
+								span 12-0-0
+						.rivals
+							.battle__photo.rivals__img
+								+image('img/banner/rivals-8.jpg', 'alt')
+
+					.battle__btn
+						button(type="button").btn.btn--transparent где смотреть?
+
+				.battle.cardRotate
+					.battle__time
+						time(datatime="19:30") 19:30 по мск
+					.battle__elem
+						.battle__name
+							.battle__fighter пётр ян
+							span легчайший вес /
+								span 16-5-0
+						.rivals
+							.battle__photo.rivals__img
+								+image('img/banner/rivals-1.jpg', 'alt')
+
+					.battle__vs VS
+
+					.battle__elem.battle__elem--left
+						.battle__name
+							.battle__fighter Юрайя Фейбер
+							span легчайший вес /
+								span 35-11-0
+						.rivals
+							.battle__photo.rivals__img
+								+image('img/banner/rivals-9.jpg', 'alt')
+
+					.battle__btn
+						button(type="button").btn.btn--transparent где смотреть?
+
+

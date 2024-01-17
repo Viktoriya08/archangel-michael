@@ -1,0 +1,169 @@
+section.default-slider.section
+	.default-slider__container
+		//- Скрыть h1, если надо
+		h1.title-hidden Заголовок h1 скрытый
+
+		.head-section.fadeInUp
+			.head-section__short
+				h3.title-short бойцы клуба
+
+			.head-section__title
+				h2.title топ 10  <br>бойцов
+
+			a(href="#").btn-link.head-section__link
+				.btn-link__text все бойцы
+
+		.default-slider__slider.default-slider-js.swiper
+			.swiper-wrapper
+				.swiper-slide
+					.card
+
+						a(href="#").card__link
+
+						.card__img.cardBgVisible
+							.card__photo
+								+image('img/card/card-0.png', 'alt')
+
+						.card__content
+							.card__title Пётр Ян
+
+							.card__info
+
+								.card__wrap
+									.card__name Рекорд
+									.card__data 16-5-0
+
+								.card__wrap
+									.card__name Весовая категория
+									.card__data легчайшая
+
+				.swiper-slide
+					.card
+
+						a(href="#").card__link
+
+						.card__img.cardBgVisible
+							.card__photo
+								+image('img/card/card-1.png', 'alt')
+							.card__label
+								.label(data-winner="Чемпион ufc в полутяжёлом весе" data-popup="#card-popup")
+									+image('img/card/ufc.svg', 'alt')
+								.label(data-winner="Чемпион rcc в полутяжёлом весе" data-popup="#card-popup")
+									+image('img/card/rcc.svg', 'alt')
+
+						.card__content
+							.card__title иван штырков
+
+							.card__info
+
+								.card__wrap
+									.card__name Рекорд
+									.card__data 22-2-1
+
+								.card__wrap
+									.card__name Весовая категория
+									.card__data полутяжелая
+
+				.swiper-slide
+					.card
+
+						a(href="#").card__link
+
+						.card__img.cardBgVisible
+							.card__photo
+								+image('img/card/card-2.png', 'alt')
+							.card__label
+								.label(data-winner="Чемпион rcc в полутяжёлом весе" data-popup="#card-popup")
+									+image('img/card/rcc.svg', 'alt')
+
+						.card__content
+							.card__title(data-popup="#card-popup") ильяс хамзин
+
+							.card__info
+
+								.card__wrap
+									.card__name Рекорд
+									.card__data 11-2-0
+
+								.card__wrap
+									.card__name Весовая категория
+									.card__data полусредняя
+
+				.swiper-slide
+					.card
+
+						a(href="#").card__link
+
+						.card__img.cardBgVisible
+							.card__photo
+								+image('img/card/card-3.png', 'alt')
+							.card__label
+								.label(data-winner="Чемпион rcc в полутяжёлом весе" data-popup="#card-popup")
+									+image('img/card/rcc.svg', 'alt')
+
+						.card__content
+							.card__title(data-popup="#card-popup") алексей кунченко
+
+							.card__info
+
+								.card__wrap
+									.card__name Рекорд
+									.card__data 21-4-0
+
+								.card__wrap
+									.card__name Весовая категория
+									.card__data полусредняя
+
+				.swiper-slide
+					.card
+
+						a(href="#").card__link
+
+						.card__img.cardBgVisible
+							.card__photo
+								+image('img/card/card-2.png', 'alt')
+							.card__label
+								.label(data-winner="Чемпион ufc в полутяжёлом весе" data-popup="#card-popup")
+									+image('img/card/ufc.svg', 'alt')
+								.label(data-winner="Чемпион rcc в полутяжёлом весе" data-popup="#card-popup")
+									+image('img/card/rcc.svg', 'alt')
+
+						.card__content
+							.card__title(data-popup="#card-popup") Пётр Ян
+
+							.card__info
+
+								.card__wrap
+									.card__name Рекорд
+									.card__data 16-5-0
+
+								.card__wrap
+									.card__name Весовая категория
+									.card__data легчайшая
+
+				.swiper-slide
+					.card
+
+						a(href="#").card__link
+
+						.card__img.cardBgVisible
+							.card__photo
+								+image('img/card/card-3.png', 'alt')
+							.card__label
+								.label(data-winner="Чемпион ufc в полутяжёлом весе" data-popup="#card-popup")
+									+image('img/card/ufc.svg', 'alt')
+
+						.card__content
+							.card__title(data-popup="#card-popup") Пётр Ян
+
+							.card__info
+
+								.card__wrap
+									.card__name Рекорд
+									.card__data 16-5-0
+
+								.card__wrap
+									.card__name Весовая категория
+									.card__data легчайшая
+
+			.swiper-pagination

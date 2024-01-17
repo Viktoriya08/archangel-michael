@@ -1,0 +1,38 @@
+.ring.ring--white
+
+	.ring__search результаты поиска: найден 1 бой
+
+	.ring__box
+
+		h2.ring__title МАЙ
+
+		.ring__battles
+			.ring__day
+				time(datatime="6 мая") 6 мая, суббота
+
+			.battle.cardRotate
+				.battle__time
+					time(datatime="18:00") 18:00 по мск
+				.battle__elem
+					.battle__name
+						.battle__fighter пётр ян
+						span легчайший вес /
+							span 16-5-0
+					.rivals
+						.battle__photo.rivals__img
+							+image('img/banner/rivals-1.jpg', 'alt')
+
+				.battle__vs VS
+
+				.battle__elem.battle__elem--left
+					.battle__name
+						.battle__fighter элджемейн Стерлинг
+						span легчайший вес /
+							span 22-3-0
+					.rivals
+						.battle__photo.rivals__img
+							+image('img/banner/rivals-2.png', 'alt')
+
+				.battle__btn
+					button(tupe="button").btn трансляция
+				a(href="#").battle__link

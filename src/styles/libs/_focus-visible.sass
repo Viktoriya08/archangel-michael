@@ -1,0 +1,10 @@
+// Полифил focus-visible
+// Документация плагина: https://github.com/WICG/focus-visible
+
+// Отключаем дефолтный фокус
+[data-js-focus-visible] :focus:not([data-focus-visible-added])
+  outline: none
+
+[data-js-focus-visible] :focus-visible
+  // outline: rem(3) solid var(--color)
+  transition: outline 0.1s ease 0s
